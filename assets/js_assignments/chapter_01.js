@@ -1,3 +1,7 @@
+var welcome = "Welcome to Assignment # 01";
+
+alert(welcome);
+
 var pass = prompt("Please enter your Password");
 
 var error = "Error! Please enter a valid password";
