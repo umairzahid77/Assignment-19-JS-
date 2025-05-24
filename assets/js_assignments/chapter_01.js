@@ -1,25 +1,37 @@
-var welcome = "Welcome to Assignment # 01";
+// task 1
+
+var welcome = "Welcome to Assignment # 01"
 
 alert(welcome);
 
-var pass = prompt("Please enter your Password");
+// task 2
 
-var error = "Error! Please enter a valid password";
+var pass = prompt("Please enter your Password")
 
-alert (error);
+var error = "Error! Please enter a valid password"
 
-var happy = "Welcome to JS Land...";
+alert (error)
 
-var line_break = "\n";
+// task 3
 
-var code = " Happy Coding!";
+var happy = "Welcome to JS Land..."
 
-alert (happy + line_break + code);
+var line_break = "\n"
 
-alert (happy);
+var code = " Happy Coding!"
 
-alert (code);
+alert (happy + line_break + code)
 
-var hello = "Hello... I Can run JS through my web brower's console";
+// task 4
 
-console.log(alert (hello));
+alert (happy)
+
+alert (code)
+
+// task 5
+
+var hello = "Hello... I Can run JS through my web brower's console"
+
+console.log(alert (hello))
+
+// the end

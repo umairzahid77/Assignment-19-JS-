@@ -1,29 +1,51 @@
-var username = "";
+// task 1
 
-var myName = "''Umair Zahid''";
+var username = ""
 
-var message = "Hello... World";
+// task 2
 
-alert(message);
+var myName = "''Umair Zahid''"
 
-alert("My name is " + myName);
+// task 3
 
-alert("I am 29 years old.");
+var message = "Hello... World"
 
-alert("I am Certified ''Mobile Application Developer''");
+alert(message)
 
-var pizza = "PIZZA \n PIZZ \n PIZ \n PI \n P";
+// task 4
 
-alert(pizza);
+alert("My name is " + myName)
 
-var email = "''umairzahid7744@gmail.com''";
+alert("I am 29 years old.")
 
-alert("My E-mail address is " + email);
+alert("I am Certified ''Mobile Application Developer''")
 
-var book = "''A smarter way to learn JavaScript''";
+// task 5
 
-alert("I am tring to learn from the Book: " + book);
+var pizza = "PIZZA \n PIZZ \n PIZ \n PI \n P"
 
-var deco = "▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬";
+alert(pizza)
 
-alert(deco);
+// task 6
+
+var email = "''umairzahid7744@gmail.com''"
+
+alert("My E-mail address is " + email)
+
+// task 7
+
+var book = "''A smarter way to learn JavaScript''"
+
+alert("I am tring to learn from the Book: " + book)
+
+// task 8
+
+document.write("Yah! I can write HTML content through JavaScript")
+
+// task 9
+
+var deco = "▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬"
+
+alert(deco)
+
+// the end

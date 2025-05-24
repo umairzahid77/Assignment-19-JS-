@@ -1,21 +1,31 @@
-var input = +prompt("Enter a number");
+// task 1
 
-var age = input;
+var input = +prompt("Enter a number")
 
-alert("Your age is " + age + " years.");
+var age = input
 
-alert("You have visited this site " + age + " times.");
+alert("Your age is " + age + " years.")
 
-var year = 2025 - age;
+// task 2
 
-document.body.innerHTML = "Your birth Year is " + year + "." + "\n Data type of year is " + typeof(year);
+alert("You have visited this site " + age + " times.")
 
-var store = "XYZ Clothing Store.";
+// task 3
 
-var name = prompt("Enter your name");
+var year = 2025 - age
 
-var title = prompt("Enter product name");
+document.write ("Your birth Year is " + year + "." + "<br> Data type of year is " + typeof(year) + "<br>")
 
-var qty = +prompt("Enter Quantity");
+// task 4
 
-document.body.innerHTML = name + ", ordered " + qty + " " + title + "on " + store;
+var store = "XYZ Clothing Store."
+
+var name = prompt("Enter your name")
+
+var title = prompt("Enter product name")
+
+var qty = +prompt("Enter Quantity")
+
+document.write (name + ", ordered " + qty + " " + title + " on " + store)
+
+// the end
