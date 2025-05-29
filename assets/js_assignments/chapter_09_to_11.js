@@ -1,4 +1,4 @@
-// task 1
+// // task 1
 
 var city = prompt("Enter the name of a city:");
 if (city === "Karachi" || city === "karachi") {
@@ -7,7 +7,7 @@ if (city === "Karachi" || city === "karachi") {
     document.write("Welcome to " + city + ".");
 }
 
-// task 2
+// // task 2
 
 var gender = prompt("Enter your Gender:")
 if (gender === "male" || gender === "Male") {
@@ -18,7 +18,7 @@ if (gender === "male" || gender === "Male") {
     document.write("<br><br>Good Morning.");
 }
 
-// task 3
+// // task 3
 
 var light = prompt("Enter your traffic light color (red, yellow, green):");
 if (light === "red" || light === "Red") {
@@ -31,7 +31,7 @@ if (light === "red" || light === "Red") {
     document.write("<br><br>Invalid color");
 }
 
-// task 4
+// // task 4
 
 var fuel = prompt("Enter the remaining fuel in liters:");
 if (fuel < 0.25) {
@@ -40,7 +40,7 @@ if (fuel < 0.25) {
     document.write("<br><br>You have enough fuel in your car.");
 }
 
-// task 5
+// // task 5
 
 var a = 4;
 if (++a === 5){
@@ -79,7 +79,7 @@ if("car" < "cat"){
 alert("car is smaller than cat");
 }
 
-// task 6
+// // task 6
 
 var tmarks = +prompt("Enter Total Marks")
 var omarks = +prompt("Enter Obtained Marks")
@@ -102,7 +102,7 @@ if (percentage > 80) {
     document.write ("<tr><td>Remark: </td><td> Sorry </td></tr></table>")
 }
 
-// task 7
+// // task 7
 
 var game = +prompt("Enter a number between 1 and 10 to guess the secret number:");
 var secretNumber = 7;
@@ -116,7 +116,7 @@ if (game === secretNumber) {
     document.write("<br><br>Sorry, that's not the correct answer.");
 }
 
-// task 8
+// // task 8
 
 var num1 = +prompt("Enter a number to check if it is divisible by 3:");
 num2 = num1 % 3
@@ -126,7 +126,7 @@ if (num3 === 0) {
     document.write("<br><br>The number " + num1 + " is not divisible by 3.");
 }
 
-// task 9
+// // task 9
 
 var num3 = +prompt("Enter a number to check if it is even or odd:");
 num4 = num3 % 2
@@ -136,7 +136,7 @@ if (num4 === 0) {
     document.write("<br><br>The number " + num3 + " is odd.");
 }
 
-// task 10
+// // task 10
 
 var temp = +prompt("Enter the temperature:");
 if (temp > 40) {
@@ -168,7 +168,7 @@ if (operator === "+") {
 } else if (operator === "%") {
     document.write("<tr><td><h2>Result: </td><td> " + (in1 % in2) + "</h2></td></tr></table>");
 } else {
-    document.write("<tr><td><h2>Result: </td><td>Invalid operator or number</h2></td></tr></table>");
+    document.write("<tr><td><h2>Result: </td><td>Invalid operator</h2></td></tr></table>");
 }
 
 // the end
