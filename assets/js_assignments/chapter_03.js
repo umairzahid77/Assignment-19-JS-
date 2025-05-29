@@ -14,7 +14,7 @@ alert("You have visited this site " + age + " times.")
 
 var year = 2025 - age
 
-document.write ("Your birth Year is " + year + "." + "<br> Data type of year is " + typeof(year) + "<br>")
+document.write ("Your birth Year is " + year + "." + "<br> Data type of year is " + typeof(year) + "<br><br>")
 
 // task 4
 
