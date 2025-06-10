@@ -2,8 +2,10 @@
 
 var city = prompt("Enter the name of a city:");
 if (city === "Karachi" || city === "karachi") {
+    console.log ("Welcome to City of Lights.");
     document.write("Welcome to City of Lights.");
 } else {
+    console.log ("Welcome to " + city + ".");
     document.write("Welcome to " + city + ".");
 }
 
@@ -11,10 +13,13 @@ if (city === "Karachi" || city === "karachi") {
 
 var gender = prompt("Enter your Gender:")
 if (gender === "male" || gender === "Male") {
+    console.log ("Good Morning Sir.");
     document.write("<br><br>Good Morning Sir.");
 } else if (gender === "female" || gender === "Female") {
+    console.log ("Good Morning Ma'am.");
     document.write("<br><br>Good Morning Ma'am.");
 } else {
+    console.log ("Good Morning.");
     document.write("<br><br>Good Morning.");
 }
 
@@ -22,12 +27,16 @@ if (gender === "male" || gender === "Male") {
 
 var light = prompt("Enter your traffic light color (red, yellow, green):");
 if (light === "red" || light === "Red") {
+    console.log ("Must Stop");
     document.write("<br><br>Must Stop");
 } else if (light === "yellow" || light === "Yellow") {
+    console.log ("Ready to move");
     document.write("<br><br>Ready to move");
 } else if (light === "green" || light === "Green") {
+    console.log ("Move now");
     document.write("<br><br>Move now");
 } else {
+    console.log ("Invalid color");
     document.write("<br><br>Invalid color");
 }
 
@@ -35,8 +44,10 @@ if (light === "red" || light === "Red") {
 
 var fuel = prompt("Enter the remaining fuel in liters:");
 if (fuel < 0.25) {
+    console.log ("Please refill the fuel in your car.");
     document.write("<br><br>Please refill the fuel in your car.");
 } else {
+    console.log ("You have enough fuel in your car.");
     document.write("<br><br>You have enough fuel in your car.");
 }
 
@@ -84,21 +95,33 @@ alert("car is smaller than cat");
 var tmarks = +prompt("Enter Total Marks")
 var omarks = +prompt("Enter Obtained Marks")
 var percentage = omarks / tmarks * 100
+console.log ("Mark Sheet")
 document.write ("<h2>Mark Sheet</h2>")
+console.log ("Total Marsk: " + tmarks + ".")
 document.write("<table><tr><td>Total Marsk: </td><td> " + tmarks + ".</td></tr>")
+console.log ("Obtained Marks " + omarks + ".")
 document.write("<tr><td>Obtained Marks </td><td> " + omarks + ".</td></tr>")
+console.log ("Your Percentage is " + percentage + ".")
 document.write("<tr><td>Your Percentage is </td><td> " + percentage + ".</td></tr>")
 if (percentage > 80) {
+    console.log ("Your Grade is: A+.")
     document.write ("<tr><td>Your Grade is: </td><td> A+. </td></tr>")
+    console.log ("Remark: Excellent")
     document.write ("<tr><td>Remark: </td><td> Excellent </td></tr></table>")
 } else if (percentage > 70) {
+    console.log ("Your Grade is: A.")
     document.write ("<tr><td>Your Grade is: </td><td> A. </td></tr>")
+    console.log ("Remark: Good")
     document.write ("<tr><td>Remark: </td><td> Good </td></tr></table>")
 } else if (percentage > 60) {
+    console.log ("Your Grade is: B.")
     document.write ("<tr><td>Your Grade is: </td><td> B. </td></tr>")
+    console.log ("Remark: You need to improve")
     document.write ("<tr><td>Remark: </td><td> You need to improve </td></tr></table>")
 } else {
+    console.log ("Grade: You are Fail.")
     document.write ("<tr><td>Grade:</td><td>You are Fail. </td></tr>")
+    console.log ("Remark: Sorry")
     document.write ("<tr><td>Remark: </td><td> Sorry </td></tr></table>")
 }
 
@@ -107,12 +130,16 @@ if (percentage > 80) {
 var game = +prompt("Enter a number between 1 and 10 to guess the secret number:");
 var secretNumber = 7;
 if (game === secretNumber) {
+    console.log ("Bingo! Correct answer.");
     document.write("<br><br>Bingo! Correct answer.");
 } else if (game === secretNumber + 1) {
+    console.log ("Close enough to the correct answer.");
     document.write("<br><br>Close enough to the correct answer.");
 } else if (game === secretNumber - 1) {
+    console.log ("Close enough to the correct answer.");
     document.write("<br><br>Close enough to the correct answer.");
 } else {
+    console.log ("Sorry, that's not the correct answer.");
     document.write("<br><br>Sorry, that's not the correct answer.");
 }
 
@@ -121,8 +148,10 @@ if (game === secretNumber) {
 var num1 = +prompt("Enter a number to check if it is divisible by 3:");
 num2 = num1 % 3
 if (num3 === 0) {
+    console.log ("The number " + num1 + " is divisible by 3.");
     document.write("<br><br>The number " + num1 + " is divisible by 3.");
 } else {
+    console.log ("The number " + num1 + " is not divisible by 3.");
     document.write("<br><br>The number " + num1 + " is not divisible by 3.");
 }
 
@@ -131,8 +160,10 @@ if (num3 === 0) {
 var num3 = +prompt("Enter a number to check if it is even or odd:");
 num4 = num3 % 2
 if (num4 === 0) {
+    console.log ("The number " + num3 + " is even.");
     document.write("<br><br>The number " + num3 + " is even.");
 } else {
+    console.log ("The number " + num3 + " is odd.");
     document.write("<br><br>The number " + num3 + " is odd.");
 }
 
@@ -140,12 +171,16 @@ if (num4 === 0) {
 
 var temp = +prompt("Enter the temperature:");
 if (temp > 40) {
+    console.log ("It is too hot outside.");
     document.write("<br><br>It is too hot outside.");
 } else if (temp > 30) {
+    console.log ("The weather today is normal.");
     document.write("<br><br>The weather today is normal.");
 } else if (temp > 20) {
+    console.log ("Today's weather is cool.");
     document.write("<br><br>Today's weather is cool.");
 } else {
+    console.log ("OMG! Today's weather is so cool.");
     document.write("<br><br>OMG! Today's weather is so cool.");
 }
 
@@ -154,20 +189,29 @@ if (temp > 40) {
 var in1 = +prompt("Enter first number:");
 var operator = prompt("Enter an operator (+, -, *, /, %):");
 var in2 = +prompt("Enter second number:");
+console.log ("First number: " + in1);
 document.write("<table><tr><td><br> First number: </td><td><br> " + in1 + "</td></tr>");
+console.log ("Operator: " + operator);
 document.write("<tr><td> Operator: </td><td> " + operator + "</td></tr>");
+console.log ("Second number: " + in2);
 document.write("<tr><td> Second number: </td><td> " + in2 + "</td></tr>");
 if (operator === "+") {
+    console.log ("Result: " + (in1 + in2));
     document.write("<tr><td><h2>Result: </td><td> " + (in1 + in2) + "</h2></td></tr></table>");
 } else if (operator === "-") {
+    console.log ("Result: " + (in1 - in2));
     document.write("<tr><td><h2>Result: </td><td> " + (in1 - in2) + "</h2></td></tr></table>");
 } else if (operator === "*") {
+    console.log ("Result: " + (in1 * in2));
     document.write("<tr><td><h2>Result: </td><td> " + (in1 * in2) + "</h2></td></tr></table>");
 } else if (operator === "/") {
+    console.log ("Result: " + (in1 / in2));
     document.write("<tr><td><h2>Result: </td><td> " + (in1 / in2) + "</h2></td></tr></table>");
 } else if (operator === "%") {
+    console.log ("Result: " + (in1 % in2));
     document.write("<tr><td><h2>Result: </td><td> " + (in1 % in2) + "</h2></td></tr></table>");
 } else {
+    console.log ("Result: Invalid operator");
     document.write("<tr><td><h2>Result: </td><td>Invalid operator</h2></td></tr></table>");
 }
 
