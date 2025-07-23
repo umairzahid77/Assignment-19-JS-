@@ -40,16 +40,31 @@ function letters() {
 var password = []
 var password2 = []
 var pass3 = []
-var len
-var showpass
-var copypass
+var len = document.getElementById("length")
+var range = document.getElementById("range")
+var showpass = document.getElementById("showpass")
+var copypass = showpass
+var remarks = document.getElementById("remarks")
+
+function sliderValue() {
+    len.innerText = range.value;
+}
 
 function creatpass() {
-    len = document.getElementById("length").value
+    if (pass2.length < 1) {
+        alert("Please select the Password Category")
+        showpass.innerText = ""
+        remarks.innerText = ""
+    } else if (len.innerText === "") {
+        alert("Please define the length of Password")
+        showpass.innerText = ""
+        remarks.innerText = ""
+    } else {
+    var values = range.value
     password = []
     password2 = []
     pass3 = []
-    for (var i = 0; i < len; i++) {
+    for (var i = 0; i < values; i++) {
         password.push(Math.floor(Math.random() * pass2.length))
     }
     for (var i = 0; i < password.length; i++) {
@@ -60,16 +75,33 @@ function creatpass() {
         var word2 = String.fromCharCode(password2[i])
         pass3.push(word2)
     }
+    if (password2.length < 6) {
+        remarks.innerText = "Your Password is Weak  ❌";
+    } else {
+        remarks.innerText = "Your Password is Strong  ✅";
+    }
     password = pass3.join("")
-    showpass = document.getElementById("showpass")
-    showpass.innerHTML = password
+    showpass.innerText = password
     copypass = password;
+    }
+}
+
+function restore() {
+    uppercase.checked = false
+    lowercase.checked = false
+    number.checked = false
+    symbol.checked = false
+    len.innerText = ""
+    range.value = len.innerText
+    showpass.innerText = ""
+    remarks.innerText = "";
 }
 
 function copy () {
-    console.log(copypass)
-    copypass.select();
-    // copypass.setSelectionRange(0,99999)
-    navigator.clipboard.writeText(copypass.value);
-    alert(copypass)
+    // copypass = document.getElementById()
+    console.log(showpass.innerText)
+    // showpass.select();
+    // showpass.setSelectionRange(0,99999)
+    navigator.clipboard.writeText(showpass.innerText);
+    alert("Password Copied to Clipboard")
 }
