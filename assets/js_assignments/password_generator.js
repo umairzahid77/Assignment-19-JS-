@@ -44,18 +44,34 @@ var len = document.getElementById("length")
 var range = document.getElementById("range")
 var showpass = document.getElementById("showpass")
 var copypass = showpass
-var remarks = document.getElementById("remarks")
+var week = document.getElementById("week")
+var good = document.getElementById("good")
+var strong = document.getElementById("strong")
 
 function sliderValue() {
-    len.innerText = range.value;
+    range.addEventListener('input', function() {
+        len.value = this.value;
+    })
+    len.addEventListener('input', function() {
+        range.value = this.value;
+    })
 }
+
+// Explanation:
+// document.getElementById(): This method retrieves the HTML element by its id.
+// addEventListener('input', ...): This attaches an event listener to the element. The 'input' event fires whenever the value of an 
+// <input> or <textarea> element is changed.
+// this.value: Inside the event listener function, this refers to the element that triggered the event (either myRange or myNumber).
+// this.value accesses its current value.
+// myNumber.value = this.value;: This line updates the value of the number input to match the range input's value.
+// myRange.value = this.value;: This line updates the value of the range input to match the number input's value.
 
 function creatpass() {
     if (pass2.length < 1) {
         alert("Please select the Password Category")
         showpass.innerText = ""
         remarks.innerText = ""
-    } else if (len.innerText === "") {
+    } else if (len.value === "") {
         alert("Please define the length of Password")
         showpass.innerText = ""
         remarks.innerText = ""
@@ -75,10 +91,18 @@ function creatpass() {
         var word2 = String.fromCharCode(password2[i])
         pass3.push(word2)
     }
-    if (password2.length < 6) {
-        remarks.innerText = "Your Password is Weak  ❌";
+    if (password2.length < 8) {
+        week.checked = true
+        strong.checked = false
+        good.checked = false
+    } else if (password2.length > 20) {
+        week.checked = false
+        strong.checked = true
+        good.checked = false
     } else {
-        remarks.innerText = "Your Password is Strong  ✅";
+        week.checked = false
+        strong.checked = false
+        good.checked = true
     }
     password = pass3.join("")
     showpass.innerText = password
@@ -87,11 +111,15 @@ function creatpass() {
 }
 
 function restore() {
+    pass2 = ""
+    week.checked = false
+    strong.checked = false
+    good.checked = false
     uppercase.checked = false
     lowercase.checked = false
     number.checked = false
     symbol.checked = false
-    len.innerText = ""
+    len.value = ""
     range.value = len.innerText
     showpass.innerText = ""
     remarks.innerText = "";
