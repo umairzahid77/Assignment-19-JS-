@@ -4,21 +4,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
     <title>Chapter # 01</title>
+
 </head>
 
 <body>
+
+    <div id="into">
+        <i>
+            <u>
+                <h1>Java Script Assingments</h1>
+                <h1>Chapter # 01</h1>
+            </u>
+        </i>
+    </div>
+    <hr>
+
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    <b>Task # 01</b>
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Write a script to greet your website visitor using JS alert box.
+                    <br>
+                    <button type="button" class="btn btn-success" onclick="task01()"><b>Run Task</b></button>
+                    <button type="button" class="btn btn-warning" onclick="showtask01()"><b>Show Code</b></button>
+                    <br><code id="task01"></code>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <b>Task # 02</b>
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Write a script to display following message on your web page: Error! Please enter a valid password.
+                    <br>
+                    <button type="button" class="btn btn-success" onclick="task02()"><b>Run Task</b></button>
+                    <button type="button" class="btn btn-warning" onclick="showtask02()"><b>Show Code</b></button>
+                    <br><code id="task02"></code>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <b>Task # 03</b>
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Write a script to display following message on your web page: Welcome to JS Land... Happy Coding!
+                    (Hint: Use line break)
+                    <br>
+                    <button type="button" class="btn btn-success" onclick="task03()"><b>Run Task</b></button>
+                    <button type="button" class="btn btn-warning" onclick="showtask03()"><b>Show Code</b></button>
+                    <br><code id="task03"></code>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    <b>Task # 04</b>
+                </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Write a script to display following messages in sequence:
+                    <br>a) Welcome to JS Land...
+                    <br>b)Happy Coding!
+                    <br>
+                    <button type="button" class="btn btn-success" onclick="task04()"><b>Run Task</b></button>
+                    <button type="button" class="btn btn-warning" onclick="showtask04()"><b>Show Code</b></button>
+                    <br><code id="task04"></code>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    <b>Task # 05</b>
+                </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Generate the following message through browser’s developer console: "Hello... I Can run JS through
+                    my web brower's console"
+                    <br>
+                    <!-- <button type="button" class="btn btn-success" onclick="task05()"><b>Run Task</b></button> -->
+                    <button type="button" class="btn btn-warning" onclick="showtask05()"><b>Show Code</b></button>
+                    <br><code id="task05"></code>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    <b>Task # 06</b>
+                </button>
+            </h2>
+            <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Make use of alerts in your new/existing HTML & CSS project.
+                    <br>
+                    <button type="button" class="btn btn-success" onclick="task06()"><b>Run Task</b></button>
+                    <button type="button" class="btn btn-warning" onclick="showtask06()"><b>Show Code</b></button>
+                    <br><code id="task06"></code>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+
     <script src="./chapter_01.js"></script>
 
     <script>
-
-        var msg = "Alert from HTML file";
-
-        alert(msg);
-
+        function task06() {
+            var msg = "Alert from Inner HTML file";
+            alert(msg);
+        }
     </script>
-
-    <h2><a href="./chapter_01.js">Show Script</a></h2>
 
 </body>
 

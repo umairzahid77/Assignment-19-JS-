@@ -3,13 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
     <title>Chapter # 04</title>
+    
 </head>
+
 <body>
+
+    <div id="into">
+        <i>
+            <u>
+                <h1>Java Script Assingments</h1>
+                <h1>Chapter # 04</h1>
+            </u>
+        </i>
+    </div>
+    <hr>
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    <b>Task # 01</b>
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Declare 3 variables in one statement.
+                    <br>
+                    <button type="button" class="btn btn-success" onclick="task01()"><b>Run Task</b></button>
+                    <button type="button" class="btn btn-warning" onclick="showtask01()"><b>Show Code</b></button>
+                    <div id="t1"></div>
+                    <br><code id="task01"></code>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <b>Task # 02</b>
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Declare 5 legal & 5 illegal variable names.
+                    <br>
+                    <button type="button" class="btn btn-success" onclick="task02()"><b>Run Task</b></button>
+                    <button type="button" class="btn btn-warning" onclick="showtask02()"><b>Show Code</b></button>
+                    <div id="t2"></div>
+                    <br><code id="task02"></code>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <b>Task # 03</b>
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Display this in your browser
+                    <br>a) A heading stating “Rules for naming JS variables”
+                    <br>b) Variable names can only contain ______, ______, ______ and ______. For example $my_1stVariable
+                    <br>c) Variables must begin with a ______, ______ or _____. For example $name, _name or name
+                    <br>d) Variable names are case _________
+                    <br>e) Variable names should not be JS _________
+                    <br>
+                    <button type="button" class="btn btn-success" onclick="task03()"><b>Run Task</b></button>
+                    <button type="button" class="btn btn-warning" onclick="showtask03()"><b>Show Code</b></button>
+                    <div id="t3"></div>
+                    <br><code id="task03"></code>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
 
     <script src="./chapter_04.js"></script>
 
-    <h2><a href="./chapter_04.js">Show Script</a></h2>
-    
 </body>
 </html>
