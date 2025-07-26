@@ -1,0 +1,124 @@
+#into {
+  background-color: rgb(145, 207, 124);
+  padding: 5px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+h1 {
+  margin: 10px;
+}
+
+.header {
+  background-color: #f44336;
+  padding: 10px 40px;
+  color: white;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0 0 5px 0;
+}
+
+#task {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.addBtn {
+  padding: 5px;
+  margin-left: 10px;
+  width: 250px;
+  background: #aaa;
+  color: #fff;
+  text-align: center;
+  font-size: 23px;
+  border-radius: 20px;
+  border-style: none;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+}
+
+#myInput {
+  margin: 0;
+  border: none;
+  width: 500px;
+  padding: 5px;
+  font-size: 22px;
+  border-radius: 20px;
+}
+
+#tasks {
+  margin-top: 20px;
+  background-color: rgb(164, 101, 191);
+  width: 100%;
+  height: 400px;
+  overflow: scroll;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  align-content: start;
+}
+
+.taskdisplay {
+  margin: 10px 50px 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.taskid {
+  width: 70px;
+  background-color: aqua;
+  border-radius: 10px;
+  margin: 5px;
+  height: 35px;
+  font-size: 20px;
+  text-align: center;
+  align-content: center;
+} 
+
+.tasks {
+  width: 250px;
+  background-color: yellow;
+  border-radius: 10px;
+  margin: 5px;
+  height: 35px;
+  font-size: 20px;
+  text-align: center;
+  align-content: center;
+} 
+
+.tasksin {
+  width: 250px;
+  border-radius: 10px;
+  margin: 5px;
+  height: 35px;
+  font-size: 20px;
+  align-content: center;
+}
+
+.btn {
+  width: 70px;
+}
+
+.x2 {
+  width: 140px;
+}
+
+.edit {
+  width: 250px;
+  background-color: yellow;
+  border-radius: 10px;
+  margin: 5px;
+  height: 35px;
+  font-size: 20px;
+  text-align: center;
+  align-content: center
+}
