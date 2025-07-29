@@ -2,15 +2,18 @@
     background-color:rgb(145, 207, 124);
     padding: 25px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    position: sticky;
+    top: 0;
     display: flex;
     text-align: center;
     justify-content: center;
 }
 
 .sec {
-    display: flex;
-    flex-flow: wrap;
-    justify-content: center;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  align-content: start;
 }
 
 .tab {

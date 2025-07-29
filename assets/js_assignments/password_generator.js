@@ -49,10 +49,10 @@ var good = document.getElementById("good")
 var strong = document.getElementById("strong")
 
 function sliderValue() {
-    range.addEventListener('input', function() {
+    range.addEventListener('input', function () {
         len.value = this.value;
     })
-    len.addEventListener('input', function() {
+    len.addEventListener('input', function () {
         range.value = this.value;
     })
 }
@@ -70,43 +70,29 @@ function creatpass() {
     if (pass2.length < 1) {
         alert("Please select the Password Category")
         showpass.innerText = ""
-        remarks.innerText = ""
     } else if (len.value === "") {
         alert("Please define the length of Password")
         showpass.innerText = ""
-        remarks.innerText = ""
     } else {
-    var values = range.value
-    password = []
-    password2 = []
-    pass3 = []
-    for (var i = 0; i < values; i++) {
-        password.push(Math.floor(Math.random() * pass2.length))
-    }
-    for (var i = 0; i < password.length; i++) {
-        var word = pass2[password[i]]
-        password2.push(word)
-    }
-    for (var i = 0; i < password2.length; i++) {
-        var word2 = String.fromCharCode(password2[i])
-        pass3.push(word2)
-    }
-    if (password2.length < 8) {
-        week.checked = true
-        strong.checked = false
-        good.checked = false
-    } else if (password2.length > 20) {
-        week.checked = false
-        strong.checked = true
-        good.checked = false
-    } else {
-        week.checked = false
-        strong.checked = false
-        good.checked = true
-    }
-    password = pass3.join("")
-    showpass.innerText = password
-    copypass = password;
+        var values = range.value
+        password = []
+        password2 = []
+        pass3 = []
+        for (var i = 0; i < values; i++) {
+            password.push(Math.floor(Math.random() * pass2.length))
+        }
+        for (var i = 0; i < password.length; i++) {
+            var word = pass2[password[i]]
+            password2.push(word)
+        }
+        for (var i = 0; i < password2.length; i++) {
+            var word2 = String.fromCharCode(password2[i])
+            pass3.push(word2)
+        }
+        remarks()
+        password = pass3.join("")
+        showpass.innerText = password
+        copypass = password;
     }
 }
 
@@ -125,11 +111,40 @@ function restore() {
     remarks.innerText = "";
 }
 
-function copy () {
+function copy() {
     // copypass = document.getElementById()
     console.log(showpass.innerText)
     // showpass.select();
     // showpass.setSelectionRange(0,99999)
     navigator.clipboard.writeText(showpass.innerText);
     alert("Password Copied to Clipboard")
+}
+
+function remarks() {
+    var remarks = document.getElementById("remarks")
+    if (password2.length < 7) {
+        remarks.innerHTML = `<div class="remarks week"></div>
+        <div class="remarks"></div>
+        <div class="remarks"></div>
+        <div class="remarks"></div>
+        <div class="remarks-text">Week</div>`
+    } else if (password2.length < 13) {
+        remarks.innerHTML = `<div class="remarks good1"></div>
+        <div class="remarks good1"></div>
+        <div class="remarks"></div>
+        <div class="remarks"></div>
+        <div class="remarks-text">Normal</div>`
+    } else if (password2.length < 20) {
+        remarks.innerHTML = `<div class="remarks good2"></div>
+        <div class="remarks good2"></div>
+        <div class="remarks good2"></div>
+        <div class="remarks"></div>
+        <div class="remarks-text">Good</div>`
+    } else {
+        remarks.innerHTML = `<div class="remarks strong"></div>
+        <div class="remarks strong"></div>
+        <div class="remarks strong"></div>
+        <div class="remarks strong"></div>
+        <div class="remarks-text">Strong</div>`
+    }
 }
