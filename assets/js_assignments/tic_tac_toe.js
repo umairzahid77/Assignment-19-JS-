@@ -1,4 +1,4 @@
-const winPatterns = [
+let winPatterns = [
     [0, 1, 2],
     [0, 3, 6],
     [0, 4, 8],
@@ -9,13 +9,10 @@ const winPatterns = [
     [6, 7, 8],
 ];
 
-console.log(winPatterns[1])
-let num = []
 let id = 0
+let num = []
 let play = []
 let chan = []
-let push
-let check
 
 function startgame() {
     num = []
@@ -31,236 +28,166 @@ function startgame() {
         num.push(id)
         body.innerHTML += `
         <div class="border border-5 box border-warning" id="b${id}">
-        <button onclick="push${id}()" id="btn${id}" class="push"></button>
+        <button onclick="press${id}()" id="btn${id}" class="push"></button>
         </div>`
         id++
     }
     body.innerHTML += `<button onclick="startgame()" class="btn btn-success">Reset Game</button>`
-    console.log(num)
 }
 
-function splicenum(splice) {
+let pres
+
+function press0() {
+    pres = 0
+    splicenum(pres)
+    splicecheck()
+    checkgame()
+}
+
+function press1() {
+    pres = 1
+    splicenum(pres)
+    splicecheck()
+    checkgame()
+}
+
+function press2() {
+    pres = 2
+    splicenum(pres)
+    splicecheck()
+    checkgame()
+}
+
+function press3() {
+    pres = 3
+    splicenum(pres)
+    splicecheck()
+    checkgame()
+}
+
+function press4() {
+    pres = 4
+    splicenum(pres)
+    splicecheck()
+    checkgame()
+}
+
+function press5() {
+    pres = 5
+    splicenum(pres)
+    splicecheck()
+    checkgame()
+}
+
+function press6() {
+    pres = 6
+    splicenum(pres)
+    splicecheck()
+    checkgame()
+}
+
+function press7() {
+    pres = 7
+    splicenum(pres)
+    splicecheck()
+    checkgame()
+}
+
+function press8() {
+    pres = 8
+    splicenum(pres)
+    splicecheck()
+    checkgame()
+}
+
+function splicenum(press) {
+    play.push(press)
     for (var i = 0; i < num.length; i++) {
-        if (num[i] === splice) {
+        if (press === num[i]) {
             num.splice(i, 1)
         }
     }
+    play.sort()
+    let pic = document.getElementById("b" + press)
+    pic.innerHTML = `<img src="../images/circle.png" class="pic" alt="">`
 }
 
-function splicecheck(temp) {
+function splicecheck() {
+    let temp = Math.floor(Math.random() * num.length)
+    if (temp === 0) {
+        temp++
+    }
+    temp = num[temp - 1]
     for (var i = 0; i < num.length; i++) {
         if (temp === num[i]) {
             num.splice(i, 1)
+            chan.push(temp)
         }
     }
+    chan.sort()
+    let pic2 = document.getElementById("b" + temp)
+    pic2.innerHTML = `<img src="../images/cross.png" class="pic" alt="">`
 }
 
 function checkgame() {
-    console.log(play)
-    console.log(chan)
-    if (play.length === 3) {
-        for (var i = 0; i < winPatterns.length; i++) {
-            if (winPatterns[i] === play) {
-                alert("You win")
-            } else if (winPatterns[i] === chan) {
-                alert("Computer win")
+    let test
+    let test3 = play.join()
+    let test4 = chan.join()
+    let count1 = 0
+    let count2 = 0
+    let count4 = 0
+    let test2
+    for (var i = 0; i < winPatterns.length; i++) {
+        test = winPatterns[i]
+        test.sort()
+        test2 = test.join()
+        if ((play.length === 3) && (test2 === test3)) {
+            count1++
+        } else if ((play.length === 3) && (test2 === test4)) {
+            count2++
+        } else if (play.length > 3) {
+            for (let j = 0; j < play.length; j++) {
+                let test5 = play.join()
+                // let test5 = play.slice(j, j + 1)
+                for (let k = 0; k < test.length; k++) {
+                    if (test5 == test[k]) {
+                        console.log(test5)
+                    }
+                }
+
+                // for (let k = 0; k < play.length; k++) {
+                //     if (test[j] === play[k]) {
+                //         count3++
+                //     } else if (test[j] === chan[k]) {
+                //         count4++
+                //     }
+                // }
+
             }
         }
-    } else if (play.length > 3) {
-        let match1 = play.slice(0, 2)
-        let match2 = play.slice(1, 3)
-        let catch1 = chan.slice(0, 2)
-        let catch2 = chan.slice(1, 3)
-        for (var i = 0; i < winPatterns.length; i++) {
-            if (winPatterns[i] === match1 || winPatterns[i] === match2) {
-                alert("You win")
-            } else if (winPatterns[i] === catch1 || winPatterns[i] === catch2) {
-                alert("Computer win")
-            }
-        }
     }
-    // console.log(match1)
-    // console.log(match2)
-    // console.log(catch1)
-    // console.log(catch2)
+    if ((count1 === 1)) {
+        let end = document.getElementById("game_body")
+        end.innerHTML = `<div class="welcome">
+            <h1>You Win</h1>
+            <button onclick="startgame()" class="start btn btn-success"><b>Play Again</b></button>
+        </div>`
+    } else if ((count2 === 1)) {
+        let end = document.getElementById("game_body")
+        end.innerHTML = `<div class="welcome">
+    <h1>You Lose</h1>
+    <button onclick="startgame()" class="start btn btn-success"><b>Play Again</b></button>
+    </div>`
+    }
 }
 
-function push0() {
-    push = 0
-    splicenum(push)
-    play.push(push)
-    check = Math.floor(Math.random() * num.length)
-    if (check === 0) {
-        check++
-    }
-    check = num[check - 1]
-    splicecheck(check)
-    chan.push(check)
-    play.sort()
-    chan.sort()
-    checkgame()
-    let pic = document.getElementById("b" + push)
-    pic.innerHTML = `<img src="../images/circle.png" class="pic" alt="">`
-    let pic2 = document.getElementById("b" + check)
-    pic2.innerHTML = `<img src="../images/cross.png" class="pic" alt="">`
-}
-
-function push1() {
-    push = 1
-    splicenum(push)
-    play.push(push)
-    let pic = document.getElementById("b" + push)
-    pic.innerHTML = `<img src="../images/circle.png" class="pic" alt="">`
-    check = Math.floor(Math.random() * num.length)
-    if (check === 0) {
-        check++
-    }
-    check = num[check - 1]
-    splicecheck(check)
-    chan.push(check)
-    play.sort()
-    chan.sort()
-    let pic2 = document.getElementById("b" + check)
-    pic2.innerHTML = `<img src="../images/cross.png" class="pic" alt="">`
-    checkgame()
-}
-
-function push2() {
-    push = 2
-    splicenum(push)
-    play.push(push)
-    let pic = document.getElementById("b" + push)
-    pic.innerHTML = `<img src="../images/circle.png" class="pic" alt="">`
-    check = Math.floor(Math.random() * num.length)
-    if (check === 0) {
-        check++
-    }
-    check = num[check - 1]
-    splicecheck(check)
-    chan.push(check)
-    play.sort()
-    chan.sort()
-    let pic2 = document.getElementById("b" + check)
-    pic2.innerHTML = `<img src="../images/cross.png" class="pic" alt="">`
-    checkgame()
-}
-
-function push3() {
-    push = 3
-    splicenum(push)
-    play.push(push)
-    let pic = document.getElementById("b" + push)
-    pic.innerHTML = `<img src="../images/circle.png" class="pic" alt="">`
-    check = Math.floor(Math.random() * num.length)
-    if (check === 0) {
-        check++
-    }
-    check = num[check - 1]
-    splicecheck(check)
-    chan.push(check)
-    play.sort()
-    chan.sort()
-    let pic2 = document.getElementById("b" + check)
-    pic2.innerHTML = `<img src="../images/cross.png" class="pic" alt="">`
-    checkgame()
-}
-
-function push4() {
-    push = 4
-    splicenum(push)
-    play.push(push)
-    let pic = document.getElementById("b" + push)
-    pic.innerHTML = `<img src="../images/circle.png" class="pic" alt="">`
-    check = Math.floor(Math.random() * num.length)
-    if (check === 0) {
-        check++
-    }
-    check = num[check - 1]
-    splicecheck(check)
-    chan.push(check)
-    play.sort()
-    chan.sort()
-    let pic2 = document.getElementById("b" + check)
-    pic2.innerHTML = `<img src="../images/cross.png" class="pic" alt="">`
-    checkgame()
-}
-
-function push5() {
-    push = 5
-    splicenum(push)
-    play.push(push)
-    let pic = document.getElementById("b" + push)
-    pic.innerHTML = `<img src="../images/circle.png" class="pic" alt="">`
-    check = Math.floor(Math.random() * num.length)
-    if (check === 0) {
-        check++
-    }
-    check = num[check - 1]
-    splicecheck(check)
-    chan.push(check)
-    play.sort()
-    chan.sort()
-    let pic2 = document.getElementById("b" + check)
-    pic2.innerHTML = `<img src="../images/cross.png" class="pic" alt="">`
-    checkgame()
-}
-
-function push6() {
-    push = 6
-    splicenum(push)
-    play.push(push)
-    let pic = document.getElementById("b" + push)
-    pic.innerHTML = `<img src="../images/circle.png" class="pic" alt="">`
-    check = Math.floor(Math.random() * num.length)
-    if (check === 0) {
-        check++
-    }
-    check = num[check - 1]
-    splicecheck(check)
-    chan.push(check)
-    play.sort()
-    chan.sort()
-    let pic2 = document.getElementById("b" + check)
-    pic2.innerHTML = `<img src="../images/cross.png" class="pic" alt="">`
-    checkgame()
-}
-
-function push7() {
-    push = 7
-    splicenum(push)
-    play.push(push)
-    let pic = document.getElementById("b" + push)
-    pic.innerHTML = `<img src="../images/circle.png" class="pic" alt="">`
-    check = Math.floor(Math.random() * num.length)
-    if (check === 0) {
-        check++
-    }
-    check = num[check - 1]
-    splicecheck(check)
-    chan.push(check)
-    play.sort()
-    chan.sort()
-    let pic2 = document.getElementById("b" + check)
-    pic2.innerHTML = `<img src="../images/cross.png" class="pic" alt="">`
-    checkgame()
-}
-
-function push8() {
-    push = 8
-    splicenum(push)
-    play.push(push)
-    let pic = document.getElementById("b" + push)
-    pic.innerHTML = `<img src="../images/circle.png" class="pic" alt="">`
-    check = Math.floor(Math.random() * num.length)
-    if (check === 0) {
-        check++
-    }
-    check = num[check - 1]
-    splicecheck(check)
-    chan.push(check)
-    play.sort()
-    chan.sort()
-    let pic2 = document.getElementById("b" + check)
-    pic2.innerHTML = `<img src="../images/cross.png" class="pic" alt="">`
-    checkgame()
-}
+// let qq
+// let rr
+// let pp = [0,1,2,3,4]
+// for (let i = 0; i < pp.length; i++) {
+//     rr = pp
+//     qq = rr.slice(i, i + 1)
+//     console.log(qq)
+//     // rr - qq
+//     // console.log(rr)
+// }
