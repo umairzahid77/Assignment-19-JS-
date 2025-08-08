@@ -19,3 +19,12 @@ h1 {
     font-size: 25px;
     color: rgb(0, 85, 255);
 }
+
+td {
+    text-align: center;
+    padding: 0 10px;
+}
+
+th {
+    text-align: center;
+}

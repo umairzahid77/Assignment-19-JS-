@@ -1,101 +1,141 @@
 // task 01
 
 function task01() {
+    let t01 = document.getElementById("t01")
+    t01.innerHTML = ``
 }
 
 // task 02
 
 function task02() {
+    let t02 = document.getElementById("t02")
+    t02.innerHTML = ``
 }
 
 // task 03
 
 function task03() {
+    let t03 = document.getElementById("t03")
+    t03.innerHTML = ``
 }
 
 // task 04
 
 function task04() {
+    let t04 = document.getElementById("t04")
+    t04.innerHTML = ``
 }
 
 // task 05
 
 function task05() {
+    let t05 = document.getElementById("t05")
+    t05.innerHTML = ``
 }
 
 // task 06
 
 function task06() {
+    let t06 = document.getElementById("t06")
+    t06.innerHTML = ``
 }
 
 // task 07
 
 function task07() {
+    let t07 = document.getElementById("t07")
+    t07.innerHTML = ``
 }
 
 // task 08
 
 function task08() {
+    let t08 = document.getElementById("t08")
+    t08.innerHTML = ``
 }
 
 // task 09
 
 function task09() {
+    let t09 = document.getElementById("t09")
+    t09.innerHTML = ``
 }
 
 // task 10
 
 function task10() {
+    let t10 = document.getElementById("t10")
+    t10.innerHTML = ``
 }
 
 // task 11
 
 function task11() {
+    let t11 = document.getElementById("t11")
+    t11.innerHTML = ``
 }
 
 // task 12
 
 function task12() {
+    let t12 = document.getElementById("t12")
+    t12.innerHTML = ``
 }
 
 // task 13
 
 function task13() {
+    let t13 = document.getElementById("t13")
+    t13.innerHTML = ``
 }
 
 // task 14
 
 function task14() {
+    let t14 = document.getElementById("t14")
+    t14.innerHTML = ``
 }
 
 // task 15
 
 function task15() {
+    let t15 = document.getElementById("t15")
+    t15.innerHTML = ``
 }
 
 // task 16
 
 function task16() {
+    let t16 = document.getElementById("t16")
+    t16.innerHTML = ``
 }
 
 // task 17
 
 function task17() {
+    let t17 = document.getElementById("t17")
+    t17.innerHTML = ``
 }
 
 // task 18
 
 function task18() {
+    let t18 = document.getElementById("t18")
+    t18.innerHTML = ``
 }
 
 // task 19
 
 function task19() {
+    let t19 = document.getElementById("t19")
+    t19.innerHTML = ``
 }
 
 // task 20
 
 function task20() {
+    let t20 = document.getElementById("t20")
+    t20.innerHTML = ``
 }
 
 // show code
