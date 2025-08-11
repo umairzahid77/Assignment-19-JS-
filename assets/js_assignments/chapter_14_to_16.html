@@ -25,7 +25,7 @@
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" onclick="clearall()">
                     <b>Task # 01</b>
                 </button>
             </h2>
@@ -43,7 +43,7 @@
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" onclick="clearall()">
                     <b>Task # 02</b>
                 </button>
             </h2>
@@ -61,7 +61,7 @@
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" onclick="clearall()">
                     <b>Task # 03</b>
                 </button>
             </h2>
@@ -79,7 +79,7 @@
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" onclick="clearall()">
                     <b>Task # 04</b>
                 </button>
             </h2>
@@ -97,7 +97,7 @@
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" onclick="clearall()">
                     <b>Task # 05</b>
                 </button>
             </h2>
@@ -115,7 +115,7 @@
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix" onclick="clearall()">
                     <b>Task # 06</b>
                 </button>
             </h2>
@@ -133,7 +133,7 @@
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                    data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven" onclick="clearall()">
                     <b>Task # 07</b>
                 </button>
             </h2>
@@ -152,7 +152,7 @@
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                    data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight" onclick="clearall()">
                     <b>Task # 08</b>
                 </button>
             </h2>
@@ -172,35 +172,25 @@
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                    data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine" onclick="clearall()">
                     <b>Task # 09</b>
                 </button>
             </h2>
             <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                    Initialize an array with color names. Display the array
-                    elements in your browser.
-                    a. Ask the user what color he/she wants to add to the
-                    beginning & add that color to the beginning of the array.
-                    Display the updated array in your browser.
-                    b. Ask the user what color he/she wants to add to the end
-                    & add that color to the end of the array. Display the
+                    Initialize an array with color names. Display the array elements in your browser.
+                    <br>a) Ask the user what color he/she wants to add to the beginning & add that color to the
+                    beginning of the array. Display the updated array in your browser.
+                    <br>b) Ask the user what color he/she wants to add to the end & add that color to the end of the
+                    array. Display the updated array in your browser.
+                    <br>c) Add two more color to the beginning of the array. Display the updated array in your browser.
+                    <br>d) Delete the first color in the array. Display the updated array in your browser.
+                    <br>e) Delete the last color in the array. Display the updated array in your browser.
+                    <br>f) Ask the user at which index he/she wants to add a color & color name. Then add the color to
+                    desired position/index. Display the updated array in your browser.
+                    <br>g) Ask the user at which index he/she wants to delete color(s) & how many colors he/she wants to
+                    delete. Then remove the same number of color(s) from user-defined position/index. Display the
                     updated array in your browser.
-                    c. Add two more color to the beginning of the array.
-                    Display the updated array in your browser.
-                    d. Delete the first color in the array. Display the updated
-                    array in your browser.
-                    e. Delete the last color in the array. Display the updated
-                    array in your browser.
-                    f. Ask the user at which index he/she wants to add a color
-                    & color name. Then add the color to desired
-                    position/index. . Display the updated array in your
-                    browser.
-                    g. Ask the user at which index he/she wants to delete
-                    color(s) & how many colors he/she wants to delete. Then remove the same number of color(s) from
-                    user-defined
-                    position/index. . Display the updated array in your
-                    browser.
                     <br>
                     <button type="button" class="btn btn-success" onclick="task09()"><b>Run Task</b></button>
                     <button type="button" class="btn btn-warning" onclick="showtask09()"><b>Show Code</b></button>
@@ -212,15 +202,14 @@
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                    data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen" onclick="clearall()">
                     <b>Task # 10</b>
                 </button>
             </h2>
             <div id="collapseTen" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                    Write a program to store student scores in an array &
-                    sort the array in ascending order using Array’s sort
-                    method.
+                    Write a program to store Educations in an array & sort the array in ascending order using Array’s
+                    sort method.
                     <br>
                     <button type="button" class="btn btn-success" onclick="task10()"><b>Run Task</b></button>
                     <button type="button" class="btn btn-warning" onclick="showtask10()"><b>Show Code</b></button>
@@ -232,15 +221,14 @@
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                    data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven" onclick="clearall()">
                     <b>Task # 11</b>
                 </button>
             </h2>
             <div id="collapseEleven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                    Write a program to initialize an array with city names.
-                    Copy 3 array elements from cities array to selectedCities
-                    array.
+                    Write a program to initialize an array with city names. Copy 3 array elements from cities array to
+                    selectedCities array.
                     <br>
                     <button type="button" class="btn btn-success" onclick="task11()"><b>Run Task</b></button>
                     <button type="button" class="btn btn-warning" onclick="showtask11()"><b>Show Code</b></button>
@@ -252,16 +240,14 @@
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+                    data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve" onclick="clearall()">
                     <b>Task # 12</b>
                 </button>
             </h2>
             <div id="collapseTwelve" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                    Write a program to create a single string from the
-                    below mentioned array:
-                    var arr = [“This ”, “ is ”, “ my ”, “ cat”];
-                    (Use array’s join method)
+                    Write a program to create a single string from the below mentioned array:
+                    <br>var arr = [“This ”, “ is ”, “ my ”, “ cat”]; (Use array’s join method)
                     <br>
                     <button type="button" class="btn btn-success" onclick="task12()"><b>Run Task</b></button>
                     <button type="button" class="btn btn-warning" onclick="showtask12()"><b>Show Code</b></button>
@@ -273,15 +259,14 @@
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
+                    data-bs-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen" onclick="clearall()">
                     <b>Task # 13</b>
                 </button>
             </h2>
             <div id="collapseThirteen" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                    Create a new array. Store values one by one in such a way
-                    that you can access the values in the order in which they
-                    were stored. (FIFO-First In First Out)
+                    Create a new array. Store values one by one in such a way that you can access the values in the
+                    order in which they were stored. (FIFO-First In First Out)
                     <br>
                     <button type="button" class="btn btn-success" onclick="task13()"><b>Run Task</b></button>
                     <button type="button" class="btn btn-warning" onclick="showtask13()"><b>Show Code</b></button>
@@ -293,16 +278,14 @@
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
+                    data-bs-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen" onclick="clearall()">
                     <b>Task # 14</b>
                 </button>
             </h2>
             <div id="collapseFourteen" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                    Create a new array. Store values one by one in such a way
-
-                    that you can access the values in reverse order. (Last In-
-                    First Out)
+                    Create a new array. Store values one by one in such a way that you can access the values in reverse
+                    order. (Last In-First Out)
                     <br>
                     <button type="button" class="btn btn-success" onclick="task14()"><b>Run Task</b></button>
                     <button type="button" class="btn btn-warning" onclick="showtask14()"><b>Show Code</b></button>
@@ -314,16 +297,14 @@
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
+                    data-bs-target="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen" onclick="clearall()">
                     <b>Task # 15</b>
                 </button>
             </h2>
             <div id="collapseFifteen" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                    Write a program to store phone manufacturers (Apple,
-                    Samsung, Motorola, Nokia, Sony & Haier) in an array.
-                    Display the following dropdown/select menu in your
-                    browser using document.write() method:
+                    Write a program to store phone manufacturers (Apple, Samsung, Motorola, Nokia, Sony & Haier) in an
+                    array. Display the following dropdown/select menu in your browser using document.write() method:
                     <br>
                     <button type="button" class="btn btn-success" onclick="task15()"><b>Run Task</b></button>
                     <button type="button" class="btn btn-warning" onclick="showtask15()"><b>Show Code</b></button>

@@ -28,3 +28,11 @@ td {
 th {
     text-align: center;
 }
+
+.next {
+    margin: 0 10px;
+}
+
+.divnext {
+    margin: 10px;
+}
