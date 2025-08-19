@@ -524,7 +524,23 @@ function task17() {
 
 function showtask17() {
     let show17 = document.getElementById("task17")
-    show17.innerText = ``
+    show17.innerText = `let num = []
+    let even = []
+    let odd = []
+    for (let i = 0;  i < 10; i++) {
+        num[i] = +prompt(Enter number $ {i + 1})
+    }
+    for (let i = 0; i < num.length; i++) {
+        if (num[i] % 2 === 0) {
+            even.push(num[i])
+        } else if (num[i] % 2 !== 0) {
+            odd.push(num[i])
+        }
+    }
+    let t17 = document.getElementById("t17")
+    t17.innerText = Number entered: $ {num}
+    Even Numbers: $ {even}
+    Odd Numbers: $ {odd}`
 }
 
 // clear all
