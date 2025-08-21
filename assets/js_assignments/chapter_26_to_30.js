@@ -153,23 +153,27 @@ function showtask07() {
 
 // task 08
 
-random = Math.floor((Math.random() * 10) + 1)
-let userInput = +prompt("Enter a number between 1 to 10");
-if (userInput === random) {
-    console.log("Congratulations! You guessed the number: " + random);
-} else {
-    console.log("Try again! The number was: " + random);
-}
-
 function task08() {
     let t08 = document.getElementById("t08")
-    t08.innerText = ``
-    t08.innerHTML = ``
+    let random = Math.floor((Math.random() * 10) + 1)
+    let userInput = +prompt("Enter a number between 1 to 10");
+    if (userInput === random) {
+        t08.innerText = `Congratulations! You guessed the right number`
+    } else {
+        t08.innerText = `Try again! The number was: ${random}`
+    }
 }
 
 function showtask08() {
     let show08 = document.getElementById("task08")
-    show08.innerText = ``
+    show08.innerText = `let t08 = document.getElementById("t08")
+    let random = Math.floor((Math.random() * 10) + 1)
+    let userInput = +prompt("Enter a number between 1 to 10");
+    if (userInput === random) {
+        t08.innerText = Congratulations! You guessed the right number
+    } else {
+        t08.innerText = Try again! The number was: $ {random}
+    }`
 }
 
 // clear all

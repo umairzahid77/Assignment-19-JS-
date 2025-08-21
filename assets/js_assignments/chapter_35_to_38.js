@@ -172,7 +172,7 @@ function task08() {
     let in3 = root(in1);
     let in4 = root(in2);
     let hypo = in3 + in4
-    let hypo2 =  Math.sqrt(hypo)
+    let hypo2 = Math.sqrt(hypo)
     let t08 = document.getElementById("t08")
     t08.innerText = `Base is ${in1}
     Perpendicular is ${in2}
@@ -199,8 +199,8 @@ function showtask08() {
 // task 09
 
 function task09() {
-    let width = +prompt("Enter Width of rectangular") 
-    let height = +prompt("Enter height of rectangular") 
+    let width = +prompt("Enter Width of rectangular")
+    let height = +prompt("Enter height of rectangular")
     function area(w, h) {
         return w * h
     }
@@ -229,61 +229,172 @@ function showtask09() {
 
 function task10() {
     let t10 = document.getElementById("t10")
-    t10.innerText = ``
-    t10.innerHTML = ``
+    let words = prompt("enter a word:")
+    let palindrome = []
+    t10.innerText = `word entered: ${words}\n`
+    for (let i = (words.length - 1); i >= 0; i--) {
+        palindrome += words[i]
+    }
+    if (words === palindrome) {
+        t10.innerText = `Word ${words} is palindrome`
+    } else {
+        t10.innerText = `Word ${words} is not palindrome`
+    }
 }
 
 function showtask10() {
     let show10 = document.getElementById("task10")
-    show10.innerText = ``
+    show10.innerText = `let t10 = document.getElementById("t10")
+    let words = prompt("enter a word:")
+    let palindrome = []
+    t10.innerText = word entered: $ {words}
+    for (let i = (words.length - 1); i >= 0; i--) {
+        palindrome += words[i]
+    }
+    if (words === palindrome) {
+        t10.innerText = Word $ {words} is palindrome
+    } else {
+        t10.innerText = Word $ {words} is not palindrome
+    }`
 }
 
 // task 11
 
 function task11() {
     let t11 = document.getElementById("t11")
-    t11.innerText = ``
-    t11.innerHTML = ``
+    let str = prompt("Enter your string:")
+    t11.innerText = `String entered: ${str}\n`
+    let array = str.split(" ")
+    for (let i = 0; i < array.length; i++) {
+        let word = array[i]
+        word = word.toLowerCase()
+        let letter = word[0]
+        letter = letter.toUpperCase()
+        word = letter + word.slice(1, word.length)
+        array[i] = word
+    }
+    str = array.join(" ")
+    t11.innerText += `Capitalized String: ${str}`
 }
 
 function showtask11() {
     let show11 = document.getElementById("task11")
-    show11.innerText = ``
+    show11.innerText = `let t11 = document.getElementById("t11")
+    let str = prompt("Enter your string:")
+    t11.innerText = String entered: $ {str}
+    let array = str.split(" ")
+    for (let i = 0; i < array.length; i++) {
+        let word = array[i]
+        word = word.toLowerCase()
+        let letter = word[0]
+        letter = letter.toUpperCase()
+        word = letter + word.slice(1, word.length)
+        array[i] = word
+    }
+    str = array.join(" ")
+    t11.innerText += Capitalized String: $ {str}`
 }
 
 // task 12
 
 function task12() {
     let t12 = document.getElementById("t12")
-    t12.innerText = ``
-    t12.innerHTML = ``
+    let str = prompt("Enter your string:")
+    t12.innerText = `String entered: ${str}\n`
+    let array = str.split(" ")
+    let lenghti = 0
+    for (let i = 0; i < array.length; i++) {
+        if (array[i].length > lenghti) {
+            lenghti = array[i].length
+        }
+    }
+    for (let i = 0; i < array.length; i++) {
+        if (array[i].length === lenghti) {
+            t12.innerText += `The largest word in string: ${array[i]}`
+        }
+    }
 }
 
 function showtask12() {
     let show12 = document.getElementById("task12")
-    show12.innerText = ``
+    show12.innerText = `let t12 = document.getElementById("t12")
+    let str = prompt("Enter your string:")
+    t12.innerText = String entered: $ {str}
+    let array = str.split(" ")
+    let lenghti = 0
+    for (let i = 0; i < array.length; i++) {
+        if (array[i].length > lenghti) {
+            lenghti = array[i].length
+        }
+    }
+    for (let i = 0; i < array.length; i++) {
+        if (array[i].length === lenghti) {
+            t12.innerText += The largest word in string: $ {array[i]}
+        }
+    }`
 }
 
 // task 13
 
 function task13() {
     let t13 = document.getElementById("t13")
-    t13.innerText = ``
-    t13.innerHTML = ``
+    let str = prompt("Enter your string:")
+    let letter = prompt("Enter a letter you want to find:")
+    str = str.toLowerCase()
+    letter = letter.toLowerCase()
+    let count = 0
+    t13.innerText = `String entered: ${str}\n`
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === letter) {
+            count++
+        }
+    }
+    t13.innerText += `The occurrance of ${letter} in above string is ${count}`
 }
 
 function showtask13() {
     let show13 = document.getElementById("task13")
-    show13.innerText = ``
+    show13.innerText = `let t13 = document.getElementById("t13")
+    let str = prompt("Enter your string:")
+    let letter = prompt("Enter a letter you want to find:")
+    str = str.toLowerCase()
+    letter = letter.toLowerCase()
+    let count = 0
+    t13.innerText = String entered: $ {str}
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === letter) {
+            count++
+        }
+    }
+    t13.innerText += The occurrance of $ {letter} in above string is $ {count}`
 }
 
 // task 14
 
 function task14() {
+    let radius
+    radius = +prompt("Enter the radious of circle")
     let t14 = document.getElementById("t14")
-    t14.innerText = ``
-    t14.innerHTML = ``
+    let pie = 3.14
+    let circlearea
+    t14.innerHTML = `Radius of circle is: ${radius}
+    <br>Pie is = 3.14
+    <br><button type="button" class="btn btn-success" onclick="cirarea(circlearea, radius)"><b>Calculate area of circle</b></button>
+    <button type="button" class="btn btn-success" onclick="circum()"><b>Calculate circumference of circle</b></button>
+    <div id="task014"></div>`
+    // return cirarea
+    // area(circlearea, radius)
+    console.log(circlearea)
 }
+
+function cirarea(cirar, rad) {
+    // let task014 = document.getElementById("task014")
+    cirar = Math.PI * Math.pow(rad, 2)
+    return cirar
+    // task014.innerText = `The Area of a circle is ${circlearea}` 
+}
+let circlecircum
+
 
 function showtask14() {
     let show14 = document.getElementById("task14")
