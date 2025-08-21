@@ -25,7 +25,8 @@
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" onclick="clearall()">
+                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"
+                    onclick="clearall()">
                     <b>Task # 01</b>
                 </button>
             </h2>
@@ -44,7 +45,8 @@
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" onclick="clearall()">
+                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
+                    onclick="clearall()">
                     <b>Task # 02</b>
                 </button>
             </h2>
@@ -63,7 +65,8 @@
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" onclick="clearall()">
+                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
+                    onclick="clearall()">
                     <b>Task # 03</b>
                 </button>
             </h2>
@@ -73,8 +76,8 @@
                     according to this table:
                     <table>
                         <tr>
-                            <td>Signal Color</td>
-                            <td>Message</td>
+                            <td><b>Signal Color</b></td>
+                            <td><b>Message</b></td>
                         </tr>
                         <tr>
                             <td>Red</td>
@@ -99,7 +102,8 @@
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" onclick="clearall()">
+                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"
+                    onclick="clearall()">
                     <b>Task # 04</b>
                 </button>
             </h2>
@@ -118,57 +122,73 @@
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" onclick="clearall()">
+                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive"
+                    onclick="clearall()">
                     <b>Task # 05</b>
                 </button>
             </h2>
             <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                     Run this script, & check whether alert message would be displayed or not. Record the outputs.
-                    <br>a) var a = 4;
-                    <br>if (++a === 5) {
-                    <br>alert("given condition for variable a is true");
-                    <br>}
-                    <br>b) var b = 82;
-                    <br>if (b++ === 83) {
-                    <br>alert("given condition for variable b is true");
-                    <br>}
-                    <br>c) var c = 12;
-                    <br>if (c++ === 13) {
-                    <br>alert("condition 1 is true");
-                    <br>}
-                    <br>if (c === 13) {
-                    <br>alert("condition 2 is true");
-                    <br>}
-                    <br>if (++c < 14) { <br> alert("condition 3 is true")
-                        <br>}
-                        <br>if (c===14) {
-                        <br> alert("condition 4 is true")
-                        <br>}
-                        <br>d) var materialCost = 20000, var laborCost = 2000, var totalCost = materialCost + laborCost,
-                        <br>if (totalCost === laborCost + materialCost) {
-                        <br> alert("The cost equals")
-                        <br>}
-                        <br>e) if (true) {
-                        <br> alert("True")
-                        <br>}
-                        <br>if (false) {
-                        <br> alert("False")
-                        <br>}
-                        <br>f) if("car" < "cat" ) { <br> alert("car is smaller than cat")
+                    <ol>
+                        <li>
+                            var a = 4;
+                            <br>if (++a === 5) {
+                            <br>alert("given condition for variable a is true");
                             <br>}
-                            <br>
-                            <button type="button" class="btn btn-success" onclick="task05()"><b>Run Task</b></button>
-                            <button type="button" class="btn btn-warning" onclick="showtask05()"><b>Show
-                                    Code</b></button>
-                            <br><code id="task05"></code>
+                        </li>
+                        <li>
+                            var b = 82;
+                            <br>if (b++ === 83) {
+                            <br>alert("given condition for variable b is true");
+                            <br>}
+                        </li>
+                        <li>
+                            var c = 12;
+                            <br>if (c++ === 13) {
+                            <br>alert("condition 1 is true");
+                            <br>}
+                            <br>if (c === 13) {
+                            <br>alert("condition 2 is true");
+                            <br>}
+                            <br>if (++c < 14) { <br> alert("condition 3 is true")
+                                <br>}
+                                <br>if (c===14) {
+                                <br> alert("condition 4 is true")
+                                <br>}
+                        </li>
+                        <li>
+                            var materialCost = 20000, var laborCost = 2000, var totalCost = materialCost +
+                            laborCost,
+                            <br>if (totalCost === laborCost + materialCost) {
+                            <br>alert("The cost equals")
+                            <br>}
+                        </li>
+                        <li>
+                            if (true) {
+                            <br> alert("True")
+                            <br>}
+                            <br>if (false) {
+                            <br> alert("False")
+                            <br>}
+                        </li>
+                        <li>
+                            if("car" < "cat" ) { <br> alert("car is smaller than cat")
+                                <br>}
+                        </li>
+                    </ol>
+                    <button type="button" class="btn btn-success" onclick="task05()"><b>Run Task</b></button>
+                    <button type="button" class="btn btn-warning" onclick="showtask05()"><b>Show
+                            Code</b></button>
+                    <br><code id="task05"></code>
                 </div>
             </div>
         </div>
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix" onclick="clearall()">
+                    data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix"
+                    onclick="clearall()">
                     <b>Task # 06</b>
                 </button>
             </h2>
@@ -214,7 +234,8 @@
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven" onclick="clearall()">
+                    data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven"
+                    onclick="clearall()">
                     <b>Task # 07</b>
                 </button>
             </h2>
@@ -222,9 +243,14 @@
                 <div class="accordion-body">
                     Guess game: Store a secret number (ranging from 1 to 10) in a variable. Prompt user to guess the
                     secret number.
-                    <br>a) If user guesses the same number, show “Bingo! Correct answer”.
-                    <br>b) If the guessed number +1 is the secret number, show “Close enough to the correct answer”.
-                    <br>
+                    <ul>
+                        <li>
+                            If user guesses the same number, show “Bingo! Correct answer”.
+                        </li>
+                        <li>
+                            If the guessed number +1 is the secret number, show “Close enough to the correct answer”.
+                        </li>
+                    </ul>
                     <button type="button" class="btn btn-success" onclick="task07()"><b>Run Task</b></button>
                     <button type="button" class="btn btn-warning" onclick="showtask07()"><b>Show Code</b></button>
                     <div id="t7"></div>
@@ -235,7 +261,8 @@
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight" onclick="clearall()">
+                    data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight"
+                    onclick="clearall()">
                     <b>Task # 08</b>
                 </button>
             </h2>
@@ -254,7 +281,8 @@
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine" onclick="clearall()">
+                    data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine"
+                    onclick="clearall()">
                     <b>Task # 09</b>
                 </button>
             </h2>
@@ -272,17 +300,28 @@
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen" onclick="clearall()">
+                    data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen"
+                    onclick="clearall()">
                     <b>Task # 10</b>
                 </button>
             </h2>
             <div id="collapseTen" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                     Write a program that takes temperature as input and shows a message based on following criteria
-                    <br>a) T > 40 then “It is too hot outside.”
-                    <br>b) T > 30 then “The Weather today is Normal.”
-                    <br>c) T > 20 then “Today’s Weather is cool.”
-                    <br>d) T > 10 then “OMG! Today’s weather is so Cool.”
+                    <ol>
+                        <li>
+                            T > 40 then “It is too hot outside.”
+                        </li>
+                        <li>
+                            T > 30 then “The Weather today is Normal.”
+                        </li>
+                        <li>
+                            T > 20 then “Today’s Weather is cool.”
+                        </li>
+                        <li>
+                            T > 10 then “OMG! Today’s weather is so Cool.”
+                        </li>
+                    </ol>
                     <br>
                     <button type="button" class="btn btn-success" onclick="task10()"><b>Run Task</b></button>
                     <button type="button" class="btn btn-warning" onclick="showtask10()"><b>Show Code</b></button>
@@ -294,17 +333,27 @@
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven" onclick="clearall()">
+                    data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven"
+                    onclick="clearall()">
                     <b>Task # 11</b>
                 </button>
             </h2>
             <div id="collapseEleven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                    Write a program to create a calculator for +,-,*, / & % using if statements. Take the following input:
-                    <br>a) First number
-                    <br>b) Second number
-                    <br>c) Operation (+, -, *, /, %)
-                    <br>Compute & show the calculated result to user.
+                    Write a program to create a calculator for +,-,*, / & % using if statements. Take the following
+                    input:
+                    <ul>
+                        <li>
+                            First number
+                        </li>
+                        <li>
+                            Second number
+                        </li>
+                        <li>
+                            Operation (+, -, *, /, %)
+                        </li>
+                    </ul>
+                    Compute & show the calculated result to user.
                     <br>
                     <button type="button" class="btn btn-success" onclick="task11()"><b>Run Task</b></button>
                     <button type="button" class="btn btn-warning" onclick="showtask11()"><b>Show Code</b></button>
