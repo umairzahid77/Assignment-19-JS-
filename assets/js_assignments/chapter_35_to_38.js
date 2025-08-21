@@ -1,963 +1,368 @@
 // task 01
 
 function task01() {
+    let d = new Date();
+    let t01 = document.getElementById("t01")
+    t01.innerText = `${d}`
+}
+
+function showtask01() {
+    let show01 = document.getElementById("task01")
+    show01.innerText = `et d = new Date();
+    let t01 = document.getElementById("t01")
+    t01.innerText = $ {d}`
 }
 
 // task 02
 
 function task02() {
+    let firstname = prompt("Enter your First name:")
+    let lastname = prompt("Enter your Last name:")
+    let t02 = document.getElementById("t02")
+    t02.innerText = `Hello ${firstname} ${lastname}, Welcome to Assignments of JavaScript`
+}
+
+function showtask02() {
+    let show02 = document.getElementById("task02")
+    show02.innerText = `let firstname = prompt("Enter your First name:")
+    let lastname = prompt("Enter your Last name:")
+    let t02 = document.getElementById("t02")
+    t02.innerText = Hello $ {firstname} $ {lastname}, Welcome to Assignments of JavaScript`
 }
 
 // task 03
 
 function task03() {
+    let firstnum = +prompt("Enter your First number:")
+    let lastnum = +prompt("Enter your second number:")
+    let t03 = document.getElementById("t03")
+    t03.innerText = `The sum of ${firstnum} & ${lastnum} is: ${firstnum + lastnum}`
+}
+
+function showtask03() {
+    let show03 = document.getElementById("task03")
+    show03.innerText = `let firstnum = +prompt("Enter your First number:")
+    let lastnum = +prompt("Enter your second number:")
+    let t03 = document.getElementById("t03")
+    t03.innerText = The sum of $ {firstnum} & $ {lastnum} is: $ {firstnum + lastnum}`
 }
 
 // task 04
 
 function task04() {
+    let t04 = document.getElementById("t04")
+    let in1 = +prompt("Enter first number:");
+    let operator = prompt("Enter an operator (+, -, *, /, %):");
+    let in2 = +prompt("Enter second number:");
+    t04.innerText = `First number: ${in1}
+    Operator: ${operator}
+    Second number: ${in2}`
+    if (operator === "+") {
+        t04.innerText += `\nResult: ${(in1 + in2)}`
+    } else if (operator === "-") {
+        t04.innerText += `\nResult: ${(in1 - in2)}`
+    } else if (operator === "*") {
+        t04.innerText += `\nResult: ${(in1 * in2)}`
+    } else if (operator === "/") {
+        t04.innerText += `\nResult: ${(in1 / in2)}`
+    } else if (operator === "%") {
+        t04.innerText += `\nResult: ${(in1 % in2)}`
+    } else {
+        t04.innerText += `\nResult: Invalid operator`
+    }
+}
+
+function showtask04() {
+    let show04 = document.getElementById("task04")
+    show04.innerText = `let t04 = document.getElementById("t04")
+    let in1 = +prompt("Enter first number:");
+    let operator = prompt("Enter an operator (+, -, *, /, %):");
+    let in2 = +prompt("Enter second number:");
+    t04.innerText = First number: $ {in1}
+    Operator: $ {operator}
+    Second number: $ {in2}
+    if (operator === "+") {
+        t04.innerText += Result: $ {(in1 + in2)}
+    } else if (operator === "-") {
+        t04.innerText += Result: $ {(in1 - in2)}
+    } else if (operator === "*") {
+        t04.innerText += Result: $ {(in1 * in2)}
+    } else if (operator === "/") {
+        t04.innerText += Result: $ {(in1 / in2)}
+    } else if (operator === "%") {
+        t04.innerText += Result: $ {(in1 % in2)}
+    } else {
+        t04.innerText += Result: Invalid operator
+    }`
 }
 
 // task 05
 
 function task05() {
+    let in1 = +prompt("Enter a number for its square root:");
+    let square = in1 * in1
+    let t05 = document.getElementById("t05")
+    t05.innerText = `The Square root of ${in1} is: ${square}`
+}
+
+function showtask05() {
+    let show05 = document.getElementById("task05")
+    show05.innerText = `let in1 = +prompt("Enter a number for its square root:");
+    let square = in1 * in1
+    let t05 = document.getElementById("t05")
+    t05.innerText = The Square root of $ {in1} is: $ {square}`
 }
 
 // task 06
 
 function task06() {
+    let in1 = +prompt("Enter a number for its factorial:");
+    let count = in1 - 1
+    for (let i = in1; i > 1; i--) {
+        in1 = in1 * count
+        count--
+    }
+    let t06 = document.getElementById("t06")
+    t06.innerText = `${in1}`
+}
+
+function showtask06() {
+    let show06 = document.getElementById("task06")
+    show06.innerText = `let in1 = +prompt("Enter a number for its factorial:");
+    let count = in1 - 1
+    for (let i = in1; i > 1; i--) {
+        in1 = in1 * count
+        count--
+    }
+    let t06 = document.getElementById("t06")
+    t06.innerText = $ {in1}`
 }
 
 // task 07
 
 function task07() {
+    let in1 = +prompt("Enter start number for counting:")
+    let in2 = +prompt("Enter end number for counting:")
+    let t07 = document.getElementById("t07")
+    t07.innerText = `Counting till ${in1} to ${in2}:\n`
+    for (let i = in1; i <= in2; i++) {
+        t07.innerText += `${i},`
+    }
+}
+
+function showtask07() {
+    let show07 = document.getElementById("task07")
+    show07.innerText = `let in1 = +prompt("Enter start number for counting:")
+    let in2 = +prompt("Enter end number for counting:")
+    let t07 = document.getElementById("t07")
+    t07.innerText = Counting till $ {in1} to $ {in2}:
+    for (let i = in1; i <= in2; i++) {
+        t07.innerText += $ {i},
+    }`
 }
 
 // task 08
 
 function task08() {
+    let in1 = +prompt("Enter the base of triangle:")
+    let in2 = +prompt("Enter the perpendicular of triangle:")
+    function root(square) {
+        return square * square
+    }
+    let in3 = root(in1);
+    let in4 = root(in2);
+    let hypo = in3 + in4
+    let hypo2 =  Math.sqrt(hypo)
+    let t08 = document.getElementById("t08")
+    t08.innerText = `Base is ${in1}
+    Perpendicular is ${in2}
+    So, hypotenuse is ${hypo2}`
+}
+
+function showtask08() {
+    let show08 = document.getElementById("task08")
+    show08.innerText = `let in1 = +prompt("Enter the base of triangle:")
+    let in2 = +prompt("Enter the perpendicular of triangle:")
+    function root(square) {
+        return square * square
+    }
+    let in3 = root(in1);
+    let in4 = root(in2);
+    let hypo = in3 + in4
+    let hypo2 =  Math.sqrt(hypo)
+    let t08 = document.getElementById("t08")
+    t08.innerText = Base is $ {in1}
+    Perpendicular is $ {in2}
+    So, hypotenuse is $ {hypo2}`
 }
 
 // task 09
 
 function task09() {
+    let width = +prompt("Enter Width of rectangular") 
+    let height = +prompt("Enter height of rectangular") 
+    function area(w, h) {
+        return w * h
+    }
+    let area2 = area(width, height)
+    let t09 = document.getElementById("t09")
+    t09.innerText = `Width of rectangular: ${width}
+    Height of rectangular: ${height}
+    So, the area of rectangular: ${area2}`
+}
+
+function showtask09() {
+    let show09 = document.getElementById("task09")
+    show09.innerText = `let width = +prompt("Enter Width of rectangular") 
+    let height = +prompt("Enter height of rectangular") 
+    function area(w, h) {
+        return w * h
+    }
+    let area2 = area(width, height)
+    let t09 = document.getElementById("t09")
+    t09.innerText = Width of rectangular: $ {width}
+    Height of rectangular: $ {height}
+    So, the area of rectangular: $ {area2}`
 }
 
 // task 10
 
 function task10() {
+    let t10 = document.getElementById("t10")
+    t10.innerText = ``
+    t10.innerHTML = ``
+}
+
+function showtask10() {
+    let show10 = document.getElementById("task10")
+    show10.innerText = ``
 }
 
 // task 11
 
 function task11() {
+    let t11 = document.getElementById("t11")
+    t11.innerText = ``
+    t11.innerHTML = ``
+}
+
+function showtask11() {
+    let show11 = document.getElementById("task11")
+    show11.innerText = ``
 }
 
 // task 12
 
 function task12() {
+    let t12 = document.getElementById("t12")
+    t12.innerText = ``
+    t12.innerHTML = ``
+}
+
+function showtask12() {
+    let show12 = document.getElementById("task12")
+    show12.innerText = ``
 }
 
 // task 13
 
 function task13() {
+    let t13 = document.getElementById("t13")
+    t13.innerText = ``
+    t13.innerHTML = ``
+}
+
+function showtask13() {
+    let show13 = document.getElementById("task13")
+    show13.innerText = ``
 }
 
 // task 14
 
 function task14() {
-}
-
-// task 15
-
-function task15() {
-}
-
-// task 16
-
-function task16() {
-}
-
-// task 17
-
-function task17() {
-}
-
-// task 18
-
-function task18() {
-}
-
-// task 19
-
-function task19() {
-}
-
-// task 20
-
-function task20() {
-}
-
-// show code
-
-function showtask01() {
-    var show01 = document.getElementById("task01")
-    show01.innerText = ``
-    var show02 = document.getElementById("task02")
-    show02.innerText = ``
-    var show03 = document.getElementById("task03")
-    show03.innerText = ``
-    var show04 = document.getElementById("task04")
-    show04.innerText = ``
-    var show05 = document.getElementById("task05")
-    show05.innerText = ``
-    var show06 = document.getElementById("task06")
-    show06.innerText = ``
-    var show07 = document.getElementById("task07")
-    show07.innerText = ``
-    var show08 = document.getElementById("task08")
-    show08.innerText = ``
-    var show09 = document.getElementById("task09")
-    show09.innerText = ``
-    var show10 = document.getElementById("task10")
-    show10.innerText = ``
-    var show11 = document.getElementById("task11")
-    show11.innerText = ``
-    var show12 = document.getElementById("task12")
-    show12.innerText = ``
-    var show13 = document.getElementById("task13")
-    show13.innerText = ``
-    var show14 = document.getElementById("task14")
-    show14.innerText = ``
-    var show15 = document.getElementById("task15")
-    show15.innerText = ``
-    var show16 = document.getElementById("task16")
-    show16.innerText = ``
-    var show17 = document.getElementById("task17")
-    show17.innerText = ``
-    var show18 = document.getElementById("task18")
-    show18.innerText = ``
-    var show19 = document.getElementById("task19")
-    show19.innerText = ``
-    var show20 = document.getElementById("task20")
-    show20.innerText = ``
-}
-
-function showtask02() {
-    var show01 = document.getElementById("task01")
-    show01.innerText = ``
-    var show02 = document.getElementById("task02")
-    show02.innerText = ``
-    var show03 = document.getElementById("task03")
-    show03.innerText = ``
-    var show04 = document.getElementById("task04")
-    show04.innerText = ``
-    var show05 = document.getElementById("task05")
-    show05.innerText = ``
-    var show06 = document.getElementById("task06")
-    show06.innerText = ``
-    var show07 = document.getElementById("task07")
-    show07.innerText = ``
-    var show08 = document.getElementById("task08")
-    show08.innerText = ``
-    var show09 = document.getElementById("task09")
-    show09.innerText = ``
-    var show10 = document.getElementById("task10")
-    show10.innerText = ``
-    var show11 = document.getElementById("task11")
-    show11.innerText = ``
-    var show12 = document.getElementById("task12")
-    show12.innerText = ``
-    var show13 = document.getElementById("task13")
-    show13.innerText = ``
-    var show14 = document.getElementById("task14")
-    show14.innerText = ``
-    var show15 = document.getElementById("task15")
-    show15.innerText = ``
-    var show16 = document.getElementById("task16")
-    show16.innerText = ``
-    var show17 = document.getElementById("task17")
-    show17.innerText = ``
-    var show18 = document.getElementById("task18")
-    show18.innerText = ``
-    var show19 = document.getElementById("task19")
-    show19.innerText = ``
-    var show20 = document.getElementById("task20")
-    show20.innerText = ``
-}
-
-function showtask03() {
-    var show01 = document.getElementById("task01")
-    show01.innerText = ``
-    var show02 = document.getElementById("task02")
-    show02.innerText = ``
-    var show03 = document.getElementById("task03")
-    show03.innerText = ``
-    var show04 = document.getElementById("task04")
-    show04.innerText = ``
-    var show05 = document.getElementById("task05")
-    show05.innerText = ``
-    var show06 = document.getElementById("task06")
-    show06.innerText = ``
-    var show07 = document.getElementById("task07")
-    show07.innerText = ``
-    var show08 = document.getElementById("task08")
-    show08.innerText = ``
-    var show09 = document.getElementById("task09")
-    show09.innerText = ``
-    var show10 = document.getElementById("task10")
-    show10.innerText = ``
-    var show11 = document.getElementById("task11")
-    show11.innerText = ``
-    var show12 = document.getElementById("task12")
-    show12.innerText = ``
-    var show13 = document.getElementById("task13")
-    show13.innerText = ``
-    var show14 = document.getElementById("task14")
-    show14.innerText = ``
-    var show15 = document.getElementById("task15")
-    show15.innerText = ``
-    var show16 = document.getElementById("task16")
-    show16.innerText = ``
-    var show17 = document.getElementById("task17")
-    show17.innerText = ``
-    var show18 = document.getElementById("task18")
-    show18.innerText = ``
-    var show19 = document.getElementById("task19")
-    show19.innerText = ``
-    var show20 = document.getElementById("task20")
-    show20.innerText = ``
-}
-
-function showtask04() {
-    var show01 = document.getElementById("task01")
-    show01.innerText = ``
-    var show02 = document.getElementById("task02")
-    show02.innerText = ``
-    var show03 = document.getElementById("task03")
-    show03.innerText = ``
-    var show04 = document.getElementById("task04")
-    show04.innerText = ``
-    var show05 = document.getElementById("task05")
-    show05.innerText = ``
-    var show06 = document.getElementById("task06")
-    show06.innerText = ``
-    var show07 = document.getElementById("task07")
-    show07.innerText = ``
-    var show08 = document.getElementById("task08")
-    show08.innerText = ``
-    var show09 = document.getElementById("task09")
-    show09.innerText = ``
-    var show10 = document.getElementById("task10")
-    show10.innerText = ``
-    var show11 = document.getElementById("task11")
-    show11.innerText = ``
-    var show12 = document.getElementById("task12")
-    show12.innerText = ``
-    var show13 = document.getElementById("task13")
-    show13.innerText = ``
-    var show14 = document.getElementById("task14")
-    show14.innerText = ``
-    var show15 = document.getElementById("task15")
-    show15.innerText = ``
-    var show16 = document.getElementById("task16")
-    show16.innerText = ``
-    var show17 = document.getElementById("task17")
-    show17.innerText = ``
-    var show18 = document.getElementById("task18")
-    show18.innerText = ``
-    var show19 = document.getElementById("task19")
-    show19.innerText = ``
-    var show20 = document.getElementById("task20")
-    show20.innerText = ``
-}
-
-function showtask05() {
-    var show01 = document.getElementById("task01")
-    show01.innerText = ``
-    var show02 = document.getElementById("task02")
-    show02.innerText = ``
-    var show03 = document.getElementById("task03")
-    show03.innerText = ``
-    var show04 = document.getElementById("task04")
-    show04.innerText = ``
-    var show05 = document.getElementById("task05")
-    show05.innerText = ``
-    var show06 = document.getElementById("task06")
-    show06.innerText = ``
-    var show07 = document.getElementById("task07")
-    show07.innerText = ``
-    var show08 = document.getElementById("task08")
-    show08.innerText = ``
-    var show09 = document.getElementById("task09")
-    show09.innerText = ``
-    var show10 = document.getElementById("task10")
-    show10.innerText = ``
-    var show11 = document.getElementById("task11")
-    show11.innerText = ``
-    var show12 = document.getElementById("task12")
-    show12.innerText = ``
-    var show13 = document.getElementById("task13")
-    show13.innerText = ``
-    var show14 = document.getElementById("task14")
-    show14.innerText = ``
-    var show15 = document.getElementById("task15")
-    show15.innerText = ``
-    var show16 = document.getElementById("task16")
-    show16.innerText = ``
-    var show17 = document.getElementById("task17")
-    show17.innerText = ``
-    var show18 = document.getElementById("task18")
-    show18.innerText = ``
-    var show19 = document.getElementById("task19")
-    show19.innerText = ``
-    var show20 = document.getElementById("task20")
-    show20.innerText = ``
-}
-
-function showtask06() {
-    var show01 = document.getElementById("task01")
-    show01.innerText = ``
-    var show02 = document.getElementById("task02")
-    show02.innerText = ``
-    var show03 = document.getElementById("task03")
-    show03.innerText = ``
-    var show04 = document.getElementById("task04")
-    show04.innerText = ``
-    var show05 = document.getElementById("task05")
-    show05.innerText = ``
-    var show06 = document.getElementById("task06")
-    show06.innerText = ``
-    var show07 = document.getElementById("task07")
-    show07.innerText = ``
-    var show08 = document.getElementById("task08")
-    show08.innerText = ``
-    var show09 = document.getElementById("task09")
-    show09.innerText = ``
-    var show10 = document.getElementById("task10")
-    show10.innerText = ``
-    var show11 = document.getElementById("task11")
-    show11.innerText = ``
-    var show12 = document.getElementById("task12")
-    show12.innerText = ``
-    var show13 = document.getElementById("task13")
-    show13.innerText = ``
-    var show14 = document.getElementById("task14")
-    show14.innerText = ``
-    var show15 = document.getElementById("task15")
-    show15.innerText = ``
-    var show16 = document.getElementById("task16")
-    show16.innerText = ``
-    var show17 = document.getElementById("task17")
-    show17.innerText = ``
-    var show18 = document.getElementById("task18")
-    show18.innerText = ``
-    var show19 = document.getElementById("task19")
-    show19.innerText = ``
-    var show20 = document.getElementById("task20")
-    show20.innerText = ``
-}
-
-function showtask07() {
-    var show01 = document.getElementById("task01")
-    show01.innerText = ``
-    var show02 = document.getElementById("task02")
-    show02.innerText = ``
-    var show03 = document.getElementById("task03")
-    show03.innerText = ``
-    var show04 = document.getElementById("task04")
-    show04.innerText = ``
-    var show05 = document.getElementById("task05")
-    show05.innerText = ``
-    var show06 = document.getElementById("task06")
-    show06.innerText = ``
-    var show07 = document.getElementById("task07")
-    show07.innerText = ``
-    var show08 = document.getElementById("task08")
-    show08.innerText = ``
-    var show09 = document.getElementById("task09")
-    show09.innerText = ``
-    var show10 = document.getElementById("task10")
-    show10.innerText = ``
-    var show11 = document.getElementById("task11")
-    show11.innerText = ``
-    var show12 = document.getElementById("task12")
-    show12.innerText = ``
-    var show13 = document.getElementById("task13")
-    show13.innerText = ``
-    var show14 = document.getElementById("task14")
-    show14.innerText = ``
-    var show15 = document.getElementById("task15")
-    show15.innerText = ``
-    var show16 = document.getElementById("task16")
-    show16.innerText = ``
-    var show17 = document.getElementById("task17")
-    show17.innerText = ``
-    var show18 = document.getElementById("task18")
-    show18.innerText = ``
-    var show19 = document.getElementById("task19")
-    show19.innerText = ``
-    var show20 = document.getElementById("task20")
-    show20.innerText = ``
-}
-
-function showtask08() {
-    var show01 = document.getElementById("task01")
-    show01.innerText = ``
-    var show02 = document.getElementById("task02")
-    show02.innerText = ``
-    var show03 = document.getElementById("task03")
-    show03.innerText = ``
-    var show04 = document.getElementById("task04")
-    show04.innerText = ``
-    var show05 = document.getElementById("task05")
-    show05.innerText = ``
-    var show06 = document.getElementById("task06")
-    show06.innerText = ``
-    var show07 = document.getElementById("task07")
-    show07.innerText = ``
-    var show08 = document.getElementById("task08")
-    show08.innerText = ``
-    var show09 = document.getElementById("task09")
-    show09.innerText = ``
-    var show10 = document.getElementById("task10")
-    show10.innerText = ``
-    var show11 = document.getElementById("task11")
-    show11.innerText = ``
-    var show12 = document.getElementById("task12")
-    show12.innerText = ``
-    var show13 = document.getElementById("task13")
-    show13.innerText = ``
-    var show14 = document.getElementById("task14")
-    show14.innerText = ``
-    var show15 = document.getElementById("task15")
-    show15.innerText = ``
-    var show16 = document.getElementById("task16")
-    show16.innerText = ``
-    var show17 = document.getElementById("task17")
-    show17.innerText = ``
-    var show18 = document.getElementById("task18")
-    show18.innerText = ``
-    var show19 = document.getElementById("task19")
-    show19.innerText = ``
-    var show20 = document.getElementById("task20")
-    show20.innerText = ``
-}
-
-function showtask09() {
-    var show01 = document.getElementById("task01")
-    show01.innerText = ``
-    var show02 = document.getElementById("task02")
-    show02.innerText = ``
-    var show03 = document.getElementById("task03")
-    show03.innerText = ``
-    var show04 = document.getElementById("task04")
-    show04.innerText = ``
-    var show05 = document.getElementById("task05")
-    show05.innerText = ``
-    var show06 = document.getElementById("task06")
-    show06.innerText = ``
-    var show07 = document.getElementById("task07")
-    show07.innerText = ``
-    var show08 = document.getElementById("task08")
-    show08.innerText = ``
-    var show09 = document.getElementById("task09")
-    show09.innerText = ``
-    var show10 = document.getElementById("task10")
-    show10.innerText = ``
-    var show11 = document.getElementById("task11")
-    show11.innerText = ``
-    var show12 = document.getElementById("task12")
-    show12.innerText = ``
-    var show13 = document.getElementById("task13")
-    show13.innerText = ``
-    var show14 = document.getElementById("task14")
-    show14.innerText = ``
-    var show15 = document.getElementById("task15")
-    show15.innerText = ``
-    var show16 = document.getElementById("task16")
-    show16.innerText = ``
-    var show17 = document.getElementById("task17")
-    show17.innerText = ``
-    var show18 = document.getElementById("task18")
-    show18.innerText = ``
-    var show19 = document.getElementById("task19")
-    show19.innerText = ``
-    var show20 = document.getElementById("task20")
-    show20.innerText = ``
-}
-
-function showtask10() {
-    var show01 = document.getElementById("task01")
-    show01.innerText = ``
-    var show02 = document.getElementById("task02")
-    show02.innerText = ``
-    var show03 = document.getElementById("task03")
-    show03.innerText = ``
-    var show04 = document.getElementById("task04")
-    show04.innerText = ``
-    var show05 = document.getElementById("task05")
-    show05.innerText = ``
-    var show06 = document.getElementById("task06")
-    show06.innerText = ``
-    var show07 = document.getElementById("task07")
-    show07.innerText = ``
-    var show08 = document.getElementById("task08")
-    show08.innerText = ``
-    var show09 = document.getElementById("task09")
-    show09.innerText = ``
-    var show10 = document.getElementById("task10")
-    show10.innerText = ``
-    var show11 = document.getElementById("task11")
-    show11.innerText = ``
-    var show12 = document.getElementById("task12")
-    show12.innerText = ``
-    var show13 = document.getElementById("task13")
-    show13.innerText = ``
-    var show14 = document.getElementById("task14")
-    show14.innerText = ``
-    var show15 = document.getElementById("task15")
-    show15.innerText = ``
-    var show16 = document.getElementById("task16")
-    show16.innerText = ``
-    var show17 = document.getElementById("task17")
-    show17.innerText = ``
-    var show18 = document.getElementById("task18")
-    show18.innerText = ``
-    var show19 = document.getElementById("task19")
-    show19.innerText = ``
-    var show20 = document.getElementById("task20")
-    show20.innerText = ``
-}
-
-function showtask11() {
-    var show01 = document.getElementById("task01")
-    show01.innerText = ``
-    var show02 = document.getElementById("task02")
-    show02.innerText = ``
-    var show03 = document.getElementById("task03")
-    show03.innerText = ``
-    var show04 = document.getElementById("task04")
-    show04.innerText = ``
-    var show05 = document.getElementById("task05")
-    show05.innerText = ``
-    var show06 = document.getElementById("task06")
-    show06.innerText = ``
-    var show07 = document.getElementById("task07")
-    show07.innerText = ``
-    var show08 = document.getElementById("task08")
-    show08.innerText = ``
-    var show09 = document.getElementById("task09")
-    show09.innerText = ``
-    var show10 = document.getElementById("task10")
-    show10.innerText = ``
-    var show11 = document.getElementById("task11")
-    show11.innerText = ``
-    var show12 = document.getElementById("task12")
-    show12.innerText = ``
-    var show13 = document.getElementById("task13")
-    show13.innerText = ``
-    var show14 = document.getElementById("task14")
-    show14.innerText = ``
-    var show15 = document.getElementById("task15")
-    show15.innerText = ``
-    var show16 = document.getElementById("task16")
-    show16.innerText = ``
-    var show17 = document.getElementById("task17")
-    show17.innerText = ``
-    var show18 = document.getElementById("task18")
-    show18.innerText = ``
-    var show19 = document.getElementById("task19")
-    show19.innerText = ``
-    var show20 = document.getElementById("task20")
-    show20.innerText = ``
-}
-
-function showtask12() {
-    var show01 = document.getElementById("task01")
-    show01.innerText = ``
-    var show02 = document.getElementById("task02")
-    show02.innerText = ``
-    var show03 = document.getElementById("task03")
-    show03.innerText = ``
-    var show04 = document.getElementById("task04")
-    show04.innerText = ``
-    var show05 = document.getElementById("task05")
-    show05.innerText = ``
-    var show06 = document.getElementById("task06")
-    show06.innerText = ``
-    var show07 = document.getElementById("task07")
-    show07.innerText = ``
-    var show08 = document.getElementById("task08")
-    show08.innerText = ``
-    var show09 = document.getElementById("task09")
-    show09.innerText = ``
-    var show10 = document.getElementById("task10")
-    show10.innerText = ``
-    var show11 = document.getElementById("task11")
-    show11.innerText = ``
-    var show12 = document.getElementById("task12")
-    show12.innerText = ``
-    var show13 = document.getElementById("task13")
-    show13.innerText = ``
-    var show14 = document.getElementById("task14")
-    show14.innerText = ``
-    var show15 = document.getElementById("task15")
-    show15.innerText = ``
-    var show16 = document.getElementById("task16")
-    show16.innerText = ``
-    var show17 = document.getElementById("task17")
-    show17.innerText = ``
-    var show18 = document.getElementById("task18")
-    show18.innerText = ``
-    var show19 = document.getElementById("task19")
-    show19.innerText = ``
-    var show20 = document.getElementById("task20")
-    show20.innerText = ``
-}
-
-function showtask13() {
-    var show01 = document.getElementById("task01")
-    show01.innerText = ``
-    var show02 = document.getElementById("task02")
-    show02.innerText = ``
-    var show03 = document.getElementById("task03")
-    show03.innerText = ``
-    var show04 = document.getElementById("task04")
-    show04.innerText = ``
-    var show05 = document.getElementById("task05")
-    show05.innerText = ``
-    var show06 = document.getElementById("task06")
-    show06.innerText = ``
-    var show07 = document.getElementById("task07")
-    show07.innerText = ``
-    var show08 = document.getElementById("task08")
-    show08.innerText = ``
-    var show09 = document.getElementById("task09")
-    show09.innerText = ``
-    var show10 = document.getElementById("task10")
-    show10.innerText = ``
-    var show11 = document.getElementById("task11")
-    show11.innerText = ``
-    var show12 = document.getElementById("task12")
-    show12.innerText = ``
-    var show13 = document.getElementById("task13")
-    show13.innerText = ``
-    var show14 = document.getElementById("task14")
-    show14.innerText = ``
-    var show15 = document.getElementById("task15")
-    show15.innerText = ``
-    var show16 = document.getElementById("task16")
-    show16.innerText = ``
-    var show17 = document.getElementById("task17")
-    show17.innerText = ``
-    var show18 = document.getElementById("task18")
-    show18.innerText = ``
-    var show19 = document.getElementById("task19")
-    show19.innerText = ``
-    var show20 = document.getElementById("task20")
-    show20.innerText = ``
+    let t14 = document.getElementById("t14")
+    t14.innerText = ``
+    t14.innerHTML = ``
 }
 
 function showtask14() {
-    var show01 = document.getElementById("task01")
-    show01.innerText = ``
-    var show02 = document.getElementById("task02")
-    show02.innerText = ``
-    var show03 = document.getElementById("task03")
-    show03.innerText = ``
-    var show04 = document.getElementById("task04")
-    show04.innerText = ``
-    var show05 = document.getElementById("task05")
-    show05.innerText = ``
-    var show06 = document.getElementById("task06")
-    show06.innerText = ``
-    var show07 = document.getElementById("task07")
-    show07.innerText = ``
-    var show08 = document.getElementById("task08")
-    show08.innerText = ``
-    var show09 = document.getElementById("task09")
-    show09.innerText = ``
-    var show10 = document.getElementById("task10")
-    show10.innerText = ``
-    var show11 = document.getElementById("task11")
-    show11.innerText = ``
-    var show12 = document.getElementById("task12")
-    show12.innerText = ``
-    var show13 = document.getElementById("task13")
-    show13.innerText = ``
-    var show14 = document.getElementById("task14")
+    let show14 = document.getElementById("task14")
     show14.innerText = ``
-    var show15 = document.getElementById("task15")
-    show15.innerText = ``
-    var show16 = document.getElementById("task16")
-    show16.innerText = ``
-    var show17 = document.getElementById("task17")
-    show17.innerText = ``
-    var show18 = document.getElementById("task18")
-    show18.innerText = ``
-    var show19 = document.getElementById("task19")
-    show19.innerText = ``
-    var show20 = document.getElementById("task20")
-    show20.innerText = ``
 }
 
-function showtask15() {
-    var show01 = document.getElementById("task01")
-    show01.innerText = ``
-    var show02 = document.getElementById("task02")
-    show02.innerText = ``
-    var show03 = document.getElementById("task03")
-    show03.innerText = ``
-    var show04 = document.getElementById("task04")
-    show04.innerText = ``
-    var show05 = document.getElementById("task05")
-    show05.innerText = ``
-    var show06 = document.getElementById("task06")
-    show06.innerText = ``
-    var show07 = document.getElementById("task07")
-    show07.innerText = ``
-    var show08 = document.getElementById("task08")
-    show08.innerText = ``
-    var show09 = document.getElementById("task09")
-    show09.innerText = ``
-    var show10 = document.getElementById("task10")
-    show10.innerText = ``
-    var show11 = document.getElementById("task11")
-    show11.innerText = ``
-    var show12 = document.getElementById("task12")
-    show12.innerText = ``
-    var show13 = document.getElementById("task13")
-    show13.innerText = ``
-    var show14 = document.getElementById("task14")
-    show14.innerText = ``
-    var show15 = document.getElementById("task15")
-    show15.innerText = ``
-    var show16 = document.getElementById("task16")
-    show16.innerText = ``
-    var show17 = document.getElementById("task17")
-    show17.innerText = ``
-    var show18 = document.getElementById("task18")
-    show18.innerText = ``
-    var show19 = document.getElementById("task19")
-    show19.innerText = ``
-    var show20 = document.getElementById("task20")
-    show20.innerText = ``
-}
+// clear all
 
-function showtask16() {
-    var show01 = document.getElementById("task01")
+function clearall() {
+    let t01 = document.getElementById("t01")
+    t01.innerText = ``
+    t01.innerHTML = ``
+    let t02 = document.getElementById("t02")
+    t02.innerText = ``
+    t02.innerHTML = ``
+    let t03 = document.getElementById("t03")
+    t03.innerText = ``
+    t03.innerHTML = ``
+    let t04 = document.getElementById("t04")
+    t04.innerText = ``
+    t04.innerHTML = ``
+    let t05 = document.getElementById("t05")
+    t05.innerText = ``
+    t05.innerHTML = ``
+    let t06 = document.getElementById("t06")
+    t06.innerText = ``
+    t06.innerHTML = ``
+    let t07 = document.getElementById("t07")
+    t07.innerText = ``
+    t07.innerHTML = ``
+    let t08 = document.getElementById("t08")
+    t08.innerText = ``
+    t08.innerHTML = ``
+    let t09 = document.getElementById("t09")
+    t09.innerText = ``
+    t09.innerHTML = ``
+    let t10 = document.getElementById("t10")
+    t10.innerText = ``
+    t10.innerHTML = ``
+    let t11 = document.getElementById("t11")
+    t11.innerText = ``
+    t11.innerHTML = ``
+    let t12 = document.getElementById("t12")
+    t12.innerText = ``
+    t12.innerHTML = ``
+    let t13 = document.getElementById("t13")
+    t13.innerText = ``
+    t13.innerHTML = ``
+    let t14 = document.getElementById("t14")
+    t14.innerText = ``
+    t14.innerHTML = ``
+    let show01 = document.getElementById("task01")
     show01.innerText = ``
-    var show02 = document.getElementById("task02")
+    let show02 = document.getElementById("task02")
     show02.innerText = ``
-    var show03 = document.getElementById("task03")
+    let show03 = document.getElementById("task03")
     show03.innerText = ``
-    var show04 = document.getElementById("task04")
+    let show04 = document.getElementById("task04")
     show04.innerText = ``
-    var show05 = document.getElementById("task05")
+    let show05 = document.getElementById("task05")
     show05.innerText = ``
-    var show06 = document.getElementById("task06")
+    let show06 = document.getElementById("task06")
     show06.innerText = ``
-    var show07 = document.getElementById("task07")
+    let show07 = document.getElementById("task07")
     show07.innerText = ``
-    var show08 = document.getElementById("task08")
+    let show08 = document.getElementById("task08")
     show08.innerText = ``
-    var show09 = document.getElementById("task09")
+    let show09 = document.getElementById("task09")
     show09.innerText = ``
-    var show10 = document.getElementById("task10")
+    let show10 = document.getElementById("task10")
     show10.innerText = ``
-    var show11 = document.getElementById("task11")
+    let show11 = document.getElementById("task11")
     show11.innerText = ``
-    var show12 = document.getElementById("task12")
+    let show12 = document.getElementById("task12")
     show12.innerText = ``
-    var show13 = document.getElementById("task13")
+    let show13 = document.getElementById("task13")
     show13.innerText = ``
-    var show14 = document.getElementById("task14")
+    let show14 = document.getElementById("task14")
     show14.innerText = ``
-    var show15 = document.getElementById("task15")
-    show15.innerText = ``
-    var show16 = document.getElementById("task16")
-    show16.innerText = ``
-    var show17 = document.getElementById("task17")
-    show17.innerText = ``
-    var show18 = document.getElementById("task18")
-    show18.innerText = ``
-    var show19 = document.getElementById("task19")
-    show19.innerText = ``
-    var show20 = document.getElementById("task20")
-    show20.innerText = ``
-}
-
-function showtask17() {
-    var show01 = document.getElementById("task01")
-    show01.innerText = ``
-    var show02 = document.getElementById("task02")
-    show02.innerText = ``
-    var show03 = document.getElementById("task03")
-    show03.innerText = ``
-    var show04 = document.getElementById("task04")
-    show04.innerText = ``
-    var show05 = document.getElementById("task05")
-    show05.innerText = ``
-    var show06 = document.getElementById("task06")
-    show06.innerText = ``
-    var show07 = document.getElementById("task07")
-    show07.innerText = ``
-    var show08 = document.getElementById("task08")
-    show08.innerText = ``
-    var show09 = document.getElementById("task09")
-    show09.innerText = ``
-    var show10 = document.getElementById("task10")
-    show10.innerText = ``
-    var show11 = document.getElementById("task11")
-    show11.innerText = ``
-    var show12 = document.getElementById("task12")
-    show12.innerText = ``
-    var show13 = document.getElementById("task13")
-    show13.innerText = ``
-    var show14 = document.getElementById("task14")
-    show14.innerText = ``
-    var show15 = document.getElementById("task15")
-    show15.innerText = ``
-    var show16 = document.getElementById("task16")
-    show16.innerText = ``
-    var show17 = document.getElementById("task17")
-    show17.innerText = ``
-    var show18 = document.getElementById("task18")
-    show18.innerText = ``
-    var show19 = document.getElementById("task19")
-    show19.innerText = ``
-    var show20 = document.getElementById("task20")
-    show20.innerText = ``
-}
-
-function showtask18() {
-    var show01 = document.getElementById("task01")
-    show01.innerText = ``
-    var show02 = document.getElementById("task02")
-    show02.innerText = ``
-    var show03 = document.getElementById("task03")
-    show03.innerText = ``
-    var show04 = document.getElementById("task04")
-    show04.innerText = ``
-    var show05 = document.getElementById("task05")
-    show05.innerText = ``
-    var show06 = document.getElementById("task06")
-    show06.innerText = ``
-    var show07 = document.getElementById("task07")
-    show07.innerText = ``
-    var show08 = document.getElementById("task08")
-    show08.innerText = ``
-    var show09 = document.getElementById("task09")
-    show09.innerText = ``
-    var show10 = document.getElementById("task10")
-    show10.innerText = ``
-    var show11 = document.getElementById("task11")
-    show11.innerText = ``
-    var show12 = document.getElementById("task12")
-    show12.innerText = ``
-    var show13 = document.getElementById("task13")
-    show13.innerText = ``
-    var show14 = document.getElementById("task14")
-    show14.innerText = ``
-    var show15 = document.getElementById("task15")
-    show15.innerText = ``
-    var show16 = document.getElementById("task16")
-    show16.innerText = ``
-    var show17 = document.getElementById("task17")
-    show17.innerText = ``
-    var show18 = document.getElementById("task18")
-    show18.innerText = ``
-    var show19 = document.getElementById("task19")
-    show19.innerText = ``
-    var show20 = document.getElementById("task20")
-    show20.innerText = ``
-}
-
-function showtask19() {
-    var show01 = document.getElementById("task01")
-    show01.innerText = ``
-    var show02 = document.getElementById("task02")
-    show02.innerText = ``
-    var show03 = document.getElementById("task03")
-    show03.innerText = ``
-    var show04 = document.getElementById("task04")
-    show04.innerText = ``
-    var show05 = document.getElementById("task05")
-    show05.innerText = ``
-    var show06 = document.getElementById("task06")
-    show06.innerText = ``
-    var show07 = document.getElementById("task07")
-    show07.innerText = ``
-    var show08 = document.getElementById("task08")
-    show08.innerText = ``
-    var show09 = document.getElementById("task09")
-    show09.innerText = ``
-    var show10 = document.getElementById("task10")
-    show10.innerText = ``
-    var show11 = document.getElementById("task11")
-    show11.innerText = ``
-    var show12 = document.getElementById("task12")
-    show12.innerText = ``
-    var show13 = document.getElementById("task13")
-    show13.innerText = ``
-    var show14 = document.getElementById("task14")
-    show14.innerText = ``
-    var show15 = document.getElementById("task15")
-    show15.innerText = ``
-    var show16 = document.getElementById("task16")
-    show16.innerText = ``
-    var show17 = document.getElementById("task17")
-    show17.innerText = ``
-    var show18 = document.getElementById("task18")
-    show18.innerText = ``
-    var show19 = document.getElementById("task19")
-    show19.innerText = ``
-    var show20 = document.getElementById("task20")
-    show20.innerText = ``
-}
-
-function showtask20() {
-    var show01 = document.getElementById("task01")
-    show01.innerText = ``
-    var show02 = document.getElementById("task02")
-    show02.innerText = ``
-    var show03 = document.getElementById("task03")
-    show03.innerText = ``
-    var show04 = document.getElementById("task04")
-    show04.innerText = ``
-    var show05 = document.getElementById("task05")
-    show05.innerText = ``
-    var show06 = document.getElementById("task06")
-    show06.innerText = ``
-    var show07 = document.getElementById("task07")
-    show07.innerText = ``
-    var show08 = document.getElementById("task08")
-    show08.innerText = ``
-    var show09 = document.getElementById("task09")
-    show09.innerText = ``
-    var show10 = document.getElementById("task10")
-    show10.innerText = ``
-    var show11 = document.getElementById("task11")
-    show11.innerText = ``
-    var show12 = document.getElementById("task12")
-    show12.innerText = ``
-    var show13 = document.getElementById("task13")
-    show13.innerText = ``
-    var show14 = document.getElementById("task14")
-    show14.innerText = ``
-    var show15 = document.getElementById("task15")
-    show15.innerText = ``
-    var show16 = document.getElementById("task16")
-    show16.innerText = ``
-    var show17 = document.getElementById("task17")
-    show17.innerText = ``
-    var show18 = document.getElementById("task18")
-    show18.innerText = ``
-    var show19 = document.getElementById("task19")
-    show19.innerText = ``
-    var show20 = document.getElementById("task20")
-    show20.innerText = ``
 }
 
 // the end
