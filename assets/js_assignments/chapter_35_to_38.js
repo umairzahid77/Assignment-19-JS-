@@ -371,34 +371,63 @@ function showtask13() {
 
 // task 14
 
+let radius
+
 function task14() {
-    let radius
     radius = +prompt("Enter the radious of circle")
     let t14 = document.getElementById("t14")
     let pie = 3.14
     let circlearea
     t14.innerHTML = `Radius of circle is: ${radius}
     <br>Pie is = 3.14
-    <br><button type="button" class="btn btn-success" onclick="cirarea(circlearea, radius)"><b>Calculate area of circle</b></button>
+    <br><button type="button" class="btn btn-success" onclick="cirarea()"><b>Calculate area of circle</b></button>
     <button type="button" class="btn btn-success" onclick="circum()"><b>Calculate circumference of circle</b></button>
     <div id="task014"></div>`
-    // return cirarea
-    // area(circlearea, radius)
     console.log(circlearea)
 }
 
-function cirarea(cirar, rad) {
-    // let task014 = document.getElementById("task014")
-    cirar = Math.PI * Math.pow(rad, 2)
-    return cirar
-    // task014.innerText = `The Area of a circle is ${circlearea}` 
+function cirarea() {
+    let task014 = document.getElementById("task014")
+    let cirar = Math.PI * (radius * radius)
+    cirar = cirar.toFixed(2)
+    task014.innerText = `The Area of a circle is ${cirar}` 
 }
-let circlecircum
 
+function circum() {
+    let task014 = document.getElementById("task014")
+    let cirar = 2 * Math.PI * radius
+    cirar = cirar.toFixed(2)
+    task014.innerText = `The Area of a circle is ${cirar}` 
+}
 
 function showtask14() {
     let show14 = document.getElementById("task14")
-    show14.innerText = ``
+    show14.innerText = `function task14() {
+    radius = +prompt("Enter the radious of circle")
+    let t14 = document.getElementById("t14")
+    let pie = 3.14
+    let circlearea
+    t14.innerHTML = Radius of circle is: $ {radius}
+    <br>Pie is = 3.14
+    <br><button type="button" class="btn btn-success" onclick="cirarea()"><b>Calculate area of circle</b></button>
+    <button type="button" class="btn btn-success" onclick="circum()"><b>Calculate circumference of circle</b></button>
+    <div id="task014"></div>
+    console.log(circlearea)
+}
+
+function cirarea() {
+    let task014 = document.getElementById("task014")
+    let cirar = Math.PI * (radius * radius)
+    cirar = cirar.toFixed(2)
+    task014.innerText = The Area of a circle is $ {cirar}
+}
+
+function circum() {
+    let task014 = document.getElementById("task014")
+    let cirar = 2 * Math.PI * radius
+    cirar = cirar.toFixed(2)
+    task014.innerText = The Area of a circle is $ {cirar}
+}`
 }
 
 // clear all
