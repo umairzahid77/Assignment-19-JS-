@@ -49,12 +49,15 @@ var good = document.getElementById("good")
 var strong = document.getElementById("strong")
 
 function sliderValue() {
-    range.addEventListener('input', function () {
-        len.value = this.value;
-    })
+    len.value = range.value
     len.addEventListener('input', function () {
         range.value = this.value;
     })
+    range.addEventListener('input', function () {
+        len.value = this.value;
+    })
+    console.log(range.value)
+    console.log(len.value)
 }
 
 // Explanation:
@@ -69,9 +72,6 @@ function sliderValue() {
 function creatpass() {
     if (pass2.length < 1) {
         alert("Please select the Password Category")
-        showpass.innerText = ""
-    } else if (len.value === "") {
-        alert("Please define the length of Password")
         showpass.innerText = ""
     } else {
         var values = range.value
@@ -122,29 +122,41 @@ function copy() {
 
 function remarks() {
     var remarks = document.getElementById("remarks")
-    if (password2.length < 7) {
-        remarks.innerHTML = `<div class="remarks week"></div>
-        <div class="remarks"></div>
-        <div class="remarks"></div>
-        <div class="remarks"></div>
-        <div class="remarks-text">Week</div>`
-    } else if (password2.length < 13) {
-        remarks.innerHTML = `<div class="remarks good1"></div>
-        <div class="remarks good1"></div>
-        <div class="remarks"></div>
-        <div class="remarks"></div>
-        <div class="remarks-text">Normal</div>`
-    } else if (password2.length < 20) {
-        remarks.innerHTML = `<div class="remarks good2"></div>
-        <div class="remarks good2"></div>
-        <div class="remarks good2"></div>
-        <div class="remarks"></div>
-        <div class="remarks-text">Good</div>`
-    } else {
+    remarks.innerHTML = ``
+    if (password2.length >= 20 && (uppercase.checked == true || lowercase.checked == true || number.checked == true || symbol.checked == true)) {
         remarks.innerHTML = `<div class="remarks strong"></div>
         <div class="remarks strong"></div>
         <div class="remarks strong"></div>
         <div class="remarks strong"></div>
         <div class="remarks-text">Strong</div>`
+    } else if (password2.length < 8 && (uppercase.checked == true || lowercase.checked == true || number.checked == true || symbol.checked == true)) {
+        remarks.innerHTML = `<div class="remarks week"></div>
+        <div class="remarks"></div>
+        <div class="remarks"></div>
+        <div class="remarks"></div>
+        <div class="remarks-text">Week</div>`
+    } else if (password2.length < 14 && (uppercase.checked == true || lowercase.checked == true || number.checked == true || symbol.checked == true)) {
+        remarks.innerHTML = `<div class="remarks good1"></div>
+        <div class="remarks good1"></div>
+        <div class="remarks"></div>
+        <div class="remarks"></div>
+        <div class="remarks-text">Normal</div>`
+    } else if (password2.length < 20 && (uppercase.checked == true || lowercase.checked == true || number.checked == true || symbol.checked == true)) {
+        remarks.innerHTML = `<div class="remarks good2"></div>
+        <div class="remarks good2"></div>
+        <div class="remarks good2"></div>
+        <div class="remarks"></div>
+        <div class="remarks-text">Good</div>`
+        // } else if (password2.length < 6 && (uppercase.checked == true || lowercase.checked == true)) {
+        //     remarks.innerHTML = `<div class="remarks good1"></div>
+        //     <div class="remarks good1"></div>
+        //     <div class="remarks"></div>
+        //     <div class="remarks"></div>
+        //     <div class="remarks-text">Week</div>`
     }
 }
+
+// uppercase.checked == true
+// lowercase.checked == true
+// number.checked == true
+// symbol.checked == true
