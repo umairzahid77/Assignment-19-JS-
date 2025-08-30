@@ -98,17 +98,14 @@ function creatpass() {
 
 function restore() {
     pass2 = ""
-    week.checked = false
-    strong.checked = false
-    good.checked = false
     uppercase.checked = false
     lowercase.checked = false
     number.checked = false
     symbol.checked = false
-    len.value = ""
-    range.value = len.innerText
+    len.value = 4
+    range.value = 4
     showpass.innerText = ""
-    remarks.innerText = "";
+    remarks.innerHTML = "";
 }
 
 function copy() {
@@ -123,19 +120,85 @@ function copy() {
 function remarks() {
     var remarks = document.getElementById("remarks")
     remarks.innerHTML = ``
-    if (password2.length >= 20 && (uppercase.checked == true || lowercase.checked == true || number.checked == true || symbol.checked == true)) {
-        remarks.innerHTML = `<div class="remarks strong"></div>
-        <div class="remarks strong"></div>
-        <div class="remarks strong"></div>
-        <div class="remarks strong"></div>
-        <div class="remarks-text">Strong</div>`
-    } else if (password2.length < 8 && (uppercase.checked == true || lowercase.checked == true || number.checked == true || symbol.checked == true)) {
+    if (password2.length < 5 && uppercase.checked == true && lowercase.checked == true && number.checked == true && symbol.checked == true) {
         remarks.innerHTML = `<div class="remarks week"></div>
         <div class="remarks"></div>
         <div class="remarks"></div>
         <div class="remarks"></div>
         <div class="remarks-text">Week</div>`
-    } else if (password2.length < 14 && (uppercase.checked == true || lowercase.checked == true || number.checked == true || symbol.checked == true)) {
+    } else if (password2.length < 7 && uppercase.checked == true && lowercase.checked == true && number.checked == true && symbol.checked == true) {
+        remarks.innerHTML = `<div class="remarks good1"></div>
+        <div class="remarks good1"></div>
+        <div class="remarks"></div>
+        <div class="remarks"></div>
+        <div class="remarks-text">Normal</div>`
+    } else if (password2.length < 9 && uppercase.checked == true && lowercase.checked == true && number.checked == true && symbol.checked == true) {
+        remarks.innerHTML = `<div class="remarks good2"></div>
+        <div class="remarks good2"></div>
+        <div class="remarks good2"></div>
+        <div class="remarks"></div>
+        <div class="remarks-text">Good</div>`
+    } else if (password2.length >= 10 && uppercase.checked == true && lowercase.checked == true && number.checked == true && symbol.checked == true) {
+        remarks.innerHTML = `<div class="remarks strong"></div>
+        <div class="remarks strong"></div>
+        <div class="remarks strong"></div>
+        <div class="remarks strong"></div>
+        <div class="remarks-text">Strong</div>`
+    } else if (password2.length < 6 && (uppercase.checked == true || lowercase.checked == true) && number.checked == true && symbol.checked == true) {
+        remarks.innerHTML = `<div class="remarks week"></div>
+        <div class="remarks"></div>
+        <div class="remarks"></div>
+        <div class="remarks"></div>
+        <div class="remarks-text">Week</div>`
+    } else if (password2.length < 9 && (uppercase.checked == true || lowercase.checked == true) && number.checked == true && symbol.checked == true) {
+        remarks.innerHTML = `<div class="remarks good1"></div>
+        <div class="remarks good1"></div>
+        <div class="remarks"></div>
+        <div class="remarks"></div>
+        <div class="remarks-text">Normal</div>`
+    } else if (password2.length < 11 && (uppercase.checked == true || lowercase.checked == true) && number.checked == true && symbol.checked == true) {
+        remarks.innerHTML = `<div class="remarks good2"></div>
+        <div class="remarks good2"></div>
+        <div class="remarks good2"></div>
+        <div class="remarks"></div>
+        <div class="remarks-text">Good</div>`
+    } else if (password2.length >= 15 && (uppercase.checked == true || lowercase.checked == true) && number.checked == true && symbol.checked == true) {
+        remarks.innerHTML = `<div class="remarks strong"></div>
+        <div class="remarks strong"></div>
+        <div class="remarks strong"></div>
+        <div class="remarks strong"></div>
+        <div class="remarks-text">Strong</div>`
+    } else if (password2.length < 6 && (uppercase.checked == true || lowercase.checked == true) && (number.checked == true || symbol.checked == true)) {
+        remarks.innerHTML = `<div class="remarks week"></div>
+        <div class="remarks"></div>
+        <div class="remarks"></div>
+        <div class="remarks"></div>
+        <div class="remarks-text">Week</div>`
+    } else if (password2.length < 11 && (uppercase.checked == true || lowercase.checked == true) && (number.checked == true || symbol.checked == true)) {
+        remarks.innerHTML = `<div class="remarks good1"></div>
+        <div class="remarks good1"></div>
+        <div class="remarks"></div>
+        <div class="remarks"></div>
+        <div class="remarks-text">Normal</div>`
+    } else if (password2.length < 16 && (uppercase.checked == true || lowercase.checked == true) && (number.checked == true || symbol.checked == true)) {
+        remarks.innerHTML = `<div class="remarks good2"></div>
+        <div class="remarks good2"></div>
+        <div class="remarks good2"></div>
+        <div class="remarks"></div>
+        <div class="remarks-text">Good</div>`
+    } else if (password2.length >= 20 && (uppercase.checked == true || lowercase.checked == true) && (number.checked == true || symbol.checked == true)) {
+        remarks.innerHTML = `<div class="remarks strong"></div>
+        <div class="remarks strong"></div>
+        <div class="remarks strong"></div>
+        <div class="remarks strong"></div>
+        <div class="remarks-text">Strong</div>`
+    } else if (password2.length < 9 && (uppercase.checked == true || lowercase.checked == true || number.checked == true || symbol.checked == true)) {
+        remarks.innerHTML = `<div class="remarks week"></div>
+        <div class="remarks"></div>
+        <div class="remarks"></div>
+        <div class="remarks"></div>
+        <div class="remarks-text">Week</div>`
+    } else if (password2.length < 13 && (uppercase.checked == true || lowercase.checked == true || number.checked == true || symbol.checked == true)) {
         remarks.innerHTML = `<div class="remarks good1"></div>
         <div class="remarks good1"></div>
         <div class="remarks"></div>
@@ -147,16 +210,11 @@ function remarks() {
         <div class="remarks good2"></div>
         <div class="remarks"></div>
         <div class="remarks-text">Good</div>`
-        // } else if (password2.length < 6 && (uppercase.checked == true || lowercase.checked == true)) {
-        //     remarks.innerHTML = `<div class="remarks good1"></div>
-        //     <div class="remarks good1"></div>
-        //     <div class="remarks"></div>
-        //     <div class="remarks"></div>
-        //     <div class="remarks-text">Week</div>`
+    } else if (password2.length >= 20 && (uppercase.checked == true || lowercase.checked == true || number.checked == true || symbol.checked == true)) {
+        remarks.innerHTML = `<div class="remarks strong"></div>
+        <div class="remarks strong"></div>
+        <div class="remarks strong"></div>
+        <div class="remarks strong"></div>
+        <div class="remarks-text">Strong</div>`
     }
 }
-
-// uppercase.checked == true
-// lowercase.checked == true
-// number.checked == true
-// symbol.checked == true
